@@ -105,9 +105,9 @@ backend:
 
       moe-a2a-backend: "megamoe"
 
-      mem-fraction-static: 0.9
+      mem-fraction-static: 0.88
       max-running-requests: 512
-      cuda-graph-max-bs: 512
+      cuda-graph-max-bs: 256
       chunked-prefill-size: 32768
       stream-interval: 60
 
@@ -129,9 +129,11 @@ backend:
       speculative-eagle-topk: 1
       speculative-num-draft-tokens: 4
 
-      mem-fraction-static: 0.9
+      mem-fraction-static: 0.88   # raised from 0.8: single-node TP4 decode + EAGLE
+                                  # speculation (bytes_per_full_token ~55.6k) OOM'd the
+                                  # KV pool at 0.8 (available_bytes=-15.47 GB) -> job 6801 died.
       max-running-requests: 1024
-      cuda-graph-max-bs: 512
+      cuda-graph-max-bs: 256      # lowered from 512 to free non-KV reserve
       swa-full-tokens-ratio: 0.15
       context-length: 16384
       stream-interval: 60

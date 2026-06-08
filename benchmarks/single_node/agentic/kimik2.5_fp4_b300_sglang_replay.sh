@@ -33,6 +33,7 @@ check_env_vars MODEL TP DATASET RESULT_DIR
 
 CONCURRENCIES="${CONCURRENCIES:-1,2,4,8,16,32,64,128}"
 WARMUP="${WARMUP:-1}"          # 1 = prime prefix cache before each point (default on)
+WARMUP_SESSIONS="${WARMUP_SESSIONS:-0}"   # >0 = warmup only first N sessions (cheap prime)
 MAX_MODEL_LEN="${MAX_MODEL_LEN:-262144}"
 if [ -z "${MAX_NUM_SEQS:-}" ]; then
     MAX_NUM_SEQS=$(echo "$CONCURRENCIES" | tr ',' '\n' | sort -n | tail -1)
@@ -102,6 +103,8 @@ start_gpu_monitor --output "$RESULT_DIR/gpu_metrics.csv" --interval 1 || true
     --concurrencies "$CONCURRENCIES" \
     --result-dir "$RESULT_DIR" \
     --title "Kimi-K2.5 NVFP4 SGLang TP$TP — $(basename "$DATASET")" \
+    --warmup-sessions "$WARMUP_SESSIONS" \
+    --prom-url "http://0.0.0.0:$PORT/metrics" \
     "${WARMUP_FLAG[@]}" \
     "${THINK_FLAG[@]}"
 

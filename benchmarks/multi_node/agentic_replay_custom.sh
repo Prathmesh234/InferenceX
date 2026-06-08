@@ -17,8 +17,13 @@ set -x
 WS="${INFMAX_CONTAINER_WORKSPACE:-/infmax-workspace}"
 RESULT_DIR="${RESULT_DIR:-/logs/agentic}"
 REPLAY_DIR="$WS/utils/custom_replay"
-DATASET="${DATASET:-$REPLAY_DIR/batch_3x.replay.jsonl}"
-CONCURRENCIES="${CONCURRENCIES:-4,8,16}"
+# Defaults match the LAST colocated run (run_*_replay_c128.sbatch): 150-session
+# batch_long, conc sweep to 128, warmup = first 15 sessions (cheap prime). Each
+# recipe's benchmark.env may override these; the defaults guarantee correct
+# behavior even if env doesn't propagate into the benchmark container.
+DATASET="${DATASET:-$REPLAY_DIR/batch_long.replay.jsonl}"
+CONCURRENCIES="${CONCURRENCIES:-4,8,16,32,64,128}"
+WARMUP_SESSIONS="${WARMUP_SESSIONS:-15}"
 mkdir -p "$RESULT_DIR"
 
 # Discover the live OpenAI endpoint + the model id the frontend advertises,
@@ -75,4 +80,5 @@ trap 'kill "$SCRAPE_PID" 2>/dev/null || true' EXIT
     --model "$MODEL_ID" \
     --concurrencies "$CONCURRENCIES" \
     --warmup \
+    --warmup-sessions "$WARMUP_SESSIONS" \
     --result-dir "$RESULT_DIR"

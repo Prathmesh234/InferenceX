@@ -1,0 +1,152 @@
+==========================================
+🚀 srtctl Sweep Orchestrator
+==========================================
+Job ID: 6736
+Config: /mnt/home/ppbhatt500/InferenceX/srt-slurm/recipes/sglang/deepseek-v4/agentic/disagg-gb300-1p1d-tp4-tp4-agentic.yaml
+Nodes: 2
+Container: /mnt/vast/squash_dupe/lmsysorg_sglang_nightly-dev-cu13-20260602-98a1b58c_arm64.sqsh
+Start: Mon Jun  8 12:48:14 AM UTC 2026
+==========================================
+
+Runtime config: /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/config.yaml
+Head node: slurm-gb300-133-189
+
+Preparing srtctl environment...
+Using uv uv 0.11.19 (aarch64-unknown-linux-gnu)...
+Running orchestrator on host (with srun access)...
+
+warning: `VIRTUAL_ENV=.venv` does not match the project environment path `.venv-compute` and will be ignored; use `--active` to target the active environment instead
+Using CPython 3.12.13
+Creating virtual environment at: .venv-compute
+Resolved 165 packages in 849ms
+Installed 61 packages in 1.99s
+ + annotated-types==0.7.0
+ + anyio==4.13.0
+ + attrs==26.1.0
+ + certifi==2026.5.20
+ + cffi==2.0.0
+ + charset-normalizer==3.4.7
+ + click==8.4.1
+ + contourpy==1.3.3
+ + cryptography==48.0.0
+ + cycler==0.12.1
+ + fonttools==4.63.0
+ + h11==0.16.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + httpx-sse==0.4.3
+ + idna==3.18
+ + jinja2==3.1.6
+ + jsonschema==4.26.0
+ + jsonschema-specifications==2025.9.1
+ + kiwisolver==1.5.0
+ + markdown-it-py==4.2.0
+ + markupsafe==3.0.3
+ + marshmallow==4.3.0
+ + marshmallow-dataclass==8.7.1
+ + matplotlib==3.10.9
+ + mcp==1.27.2
+ + mdurl==0.1.2
+ + mypy-extensions==1.1.0
+ + numpy==2.4.6
+ + packaging==26.2
+ + pillow==12.2.0
+ + prompt-toolkit==3.0.52
+ + pycparser==3.0
+ + pydantic==2.13.4
+ + pydantic-core==2.46.4
+ + pydantic-settings==2.14.1
+ + pygments==2.20.0
+ + pyjwt==2.13.0
+ + pyparsing==3.3.2
+ + python-dateutil==2.9.0.post0
+ + python-dotenv==1.2.2
+ + python-multipart==0.0.32
+ + pyyaml==6.0.3
+ + questionary==2.1.1
+ + referencing==0.37.0
+ + requests==2.34.2
+ + rich==14.1.0
+ + rpds-py==2026.5.1
+ + ruamel-yaml==0.18.17
+ + ruamel-yaml-clib==0.2.15
+ + six==1.17.0
+ + srtctl==0.3.0 (from file:///mnt/home/ppbhatt500/InferenceX/srt-slurm)
+ + sse-starlette==3.4.4
+ + starlette==1.2.1
+ + typeguard==4.5.2
+ + typing-extensions==4.15.0
+ + typing-inspect==0.9.0
+ + typing-inspection==0.4.2
+ + urllib3==2.7.0
+ + uvicorn==0.49.0
+ + wcwidth==0.8.0
+warning: `VIRTUAL_ENV=.venv` does not match the project environment path `.venv-compute` and will be ignored; use `--active` to target the active environment instead
+2026-06-08 00:48:19 [INFO] Loaded config: manual
+2026-06-08 00:48:21 [INFO] Sweep Orchestrator
+2026-06-08 00:48:21 [INFO] Job ID: 6736
+2026-06-08 00:48:21 [INFO] Run name: manual_6736
+2026-06-08 00:48:21 [INFO] Config: manual
+2026-06-08 00:48:21 [INFO] Infra node: slurm-gb300-133-189
+2026-06-08 00:48:21 [INFO] Head node: slurm-gb300-133-189
+2026-06-08 00:48:21 [INFO] Worker nodes: slurm-gb300-133-189, slurm-gb300-133-191
+2026-06-08 00:48:21 [INFO] Wrote lockfile: /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/recipe.lock.yaml
+2026-06-08 00:48:21 [INFO] Starting infrastructure services (NATS, etcd)
+2026-06-08 00:48:21 [INFO] Infra node: slurm-gb300-133-189
+2026-06-08 00:48:21 [INFO] Waiting for NATS (port 4222) on slurm-gb300-133-189...
+2026-06-08 00:48:39 [INFO] NATS is ready
+2026-06-08 00:48:39 [INFO] Waiting for etcd (port 2379) on slurm-gb300-133-189...
+2026-06-08 00:48:39 [INFO] etcd is ready
+2026-06-08 00:48:39 [INFO] Starting backend workers
+2026-06-08 00:48:39 [INFO] Starting prefill worker 0 on slurm-gb300-133-189
+2026-06-08 00:48:41 [INFO] Env: DYN_LOG=info,dynamo_runtime::pipeline::network::ingress::push_handler=warn DYN_REQUEST_PLANE=nats DYN_SKIP_SGLANG_LOG_FORMATTING=1 DYN_SYSTEM_PORT=7500 ETCD_ENDPOINTS=http://slurm-gb300-133-189:2379 HEAD_NODE_IP=10.0.18.231 MC_FORCE_MNNVL=1 NATS_SERVER=nats://slurm-gb300-133-189:4222 NCCL_CUMEM_ENABLE=1 NCCL_MNNVL_ENABLE=1 PYTHONUNBUFFERED=1 SGLANG_DEFAULT_THINKING=1 SGLANG_DISAGGREGATION_BOOTSTRAP_TIMEOUT=100000 SGLANG_DISAGGREGATION_WAITING_TIMEOUT=100000 SGLANG_DSV4_REASONING_EFFORT=max SGLANG_JIT_DEEPGEMM_FAST_WARMUP=1 SGLANG_MOONCAKE_CUSTOM_MEM_POOL=True SGLANG_OPT_SWA_EVICT_DROP_PAGE_MARGIN=1 SGLANG_OPT_SWA_RELEASE_LEAF_LOCK_AFTER_WINDOW=1 SGLANG_OPT_SWA_SPLIT_LEAF_ON_INSERT=1 SGLANG_RADIX_FORCE_MISS=1
+2026-06-08 00:48:41 [INFO] Command: python3 -m dynamo.sglang --model-path /model --served-model-name deepseek-ai/DeepSeek-V4-Pro --host 0.0.0.0 --port 6100 --disaggregation-mode prefill --disaggregation-bootstrap-port 7200 --dump-config-to /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs/slurm-gb300-133-189_config.json --chunked-prefill-size 32768 --cuda-graph-max-bs 512 --data-parallel-size 1 --disable-flashinfer-autotune --disable-radix-cache --disaggregation-mode prefill --disaggregation-transfer-backend mooncake --expert-parallel-size 1 --max-running-requests 512 --mem-fraction-static 0.9 --moe-runner-backend flashinfer_mxfp4 --tensor-parallel-size 4 --trust-remote-code
+2026-06-08 00:48:41 [INFO] Log: /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs/slurm-gb300-133-189_prefill_w0.out
+2026-06-08 00:48:41 [INFO] Starting decode worker 0 on slurm-gb300-133-191
+2026-06-08 00:48:43 [INFO] Env: DYN_LOG=info,dynamo_runtime::pipeline::network::ingress::push_handler=warn DYN_REQUEST_PLANE=nats DYN_SKIP_SGLANG_LOG_FORMATTING=1 DYN_SYSTEM_PORT=7501 ETCD_ENDPOINTS=http://slurm-gb300-133-189:2379 HEAD_NODE_IP=10.0.18.231 MC_FORCE_MNNVL=1 NATS_SERVER=nats://slurm-gb300-133-189:4222 NCCL_CUMEM_ENABLE=1 NCCL_MNNVL_ENABLE=1 PYTHONUNBUFFERED=1 SGLANG_DEFAULT_THINKING=1 SGLANG_DISAGGREGATION_BOOTSTRAP_TIMEOUT=100000 SGLANG_DISAGGREGATION_WAITING_TIMEOUT=100000 SGLANG_DSV4_REASONING_EFFORT=max SGLANG_JIT_DEEPGEMM_FAST_WARMUP=1 SGLANG_MOONCAKE_CUSTOM_MEM_POOL=True SGLANG_OPT_SWA_EVICT_DROP_PAGE_MARGIN=1 SGLANG_OPT_SWA_RELEASE_LEAF_LOCK_AFTER_WINDOW=1 SGLANG_OPT_SWA_SPLIT_LEAF_ON_INSERT=1 SGLANG_RADIX_FORCE_MISS=1
+2026-06-08 00:48:43 [INFO] Command: python3 -m dynamo.sglang --model-path /model --served-model-name deepseek-ai/DeepSeek-V4-Pro --host 0.0.0.0 --port 6100 --disaggregation-mode decode --dump-config-to /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs/slurm-gb300-133-191_config.json --context-length 16384 --cuda-graph-max-bs 512 --data-parallel-size 1 --disable-flashinfer-autotune --disable-radix-cache --disaggregation-mode decode --disaggregation-transfer-backend mooncake --expert-parallel-size 1 --max-running-requests 1024 --mem-fraction-static 0.9 --moe-runner-backend flashinfer_mxfp4 --swa-full-tokens-ratio 0.1 --tensor-parallel-size 4 --trust-remote-code
+2026-06-08 00:48:43 [INFO] Log: /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs/slurm-gb300-133-191_decode_w0.out
+2026-06-08 00:48:43 [INFO] Started 2 worker processes
+2026-06-08 00:48:43 [INFO] Starting frontend layer
+2026-06-08 00:48:43 [INFO] Frontend topology: nginx on slurm-gb300-133-189, 1 frontends on ['slurm-gb300-133-191']
+2026-06-08 00:48:43 [INFO] Starting nginx on slurm-gb300-133-189
+2026-06-08 00:48:44 [WARNING] Cluster default_bash_preamble is set but this srun bypasses the bash wrapper (use_bash_wrapper=False); preamble will not be applied. command=bash -c 'nginx -c /logs/nginx.conf -g '"'"'daemon off;'"'"''
+2026-06-08 00:48:44 [INFO] Starting dynamo frontend 0 on slurm-gb300-133-191
+2026-06-08 00:48:44 [INFO] Telemetry disabled
+2026-06-08 00:48:44 [INFO] 
+2026-06-08 00:48:44 [INFO] ============================================================
+2026-06-08 00:48:44 [INFO] Connection Commands
+2026-06-08 00:48:44 [INFO] ============================================================
+2026-06-08 00:48:44 [INFO] Frontend URL: http://slurm-gb300-133-189:8000
+2026-06-08 00:48:44 [INFO] 
+2026-06-08 00:48:44 [INFO] To connect to head node (slurm-gb300-133-189):
+2026-06-08 00:48:44 [INFO]   srun --container-image=/mnt/vast/squash_dupe/lmsysorg_sglang_nightly-dev-cu13-20260602-98a1b58c_arm64.sqsh --container-mounts=/mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs:/logs,/mnt/vast/models/dsv4:/model,/mnt/home/ppbhatt500/InferenceX/srt-slurm/configs:/configs,/mnt/home/ppbhatt500/InferenceX/srt-slurm/src/srtctl/runtime_scripts:/srtctl-runtime,/mnt/home/ppbhatt500/InferenceX/srt-slurm/src/srtctl/benchmarks/scripts:/srtctl-benchmarks,/mnt/vast/dynamo-wheels-cache:/configs/dynamo-wheels,/mnt/vast/ai-perf-cache:/aiperf_mmap_cache,/mnt/home/ppbhatt500/InferenceX:/infmax-workspace --jobid 6736 -w slurm-gb300-133-189 --overlap --pty bash
+2026-06-08 00:48:44 [INFO] 
+2026-06-08 00:48:44 [INFO] To connect to worker node (slurm-gb300-133-191):
+2026-06-08 00:48:44 [INFO]   srun --container-image=/mnt/vast/squash_dupe/lmsysorg_sglang_nightly-dev-cu13-20260602-98a1b58c_arm64.sqsh --container-mounts=/mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs:/logs,/mnt/vast/models/dsv4:/model,/mnt/home/ppbhatt500/InferenceX/srt-slurm/configs:/configs,/mnt/home/ppbhatt500/InferenceX/srt-slurm/src/srtctl/runtime_scripts:/srtctl-runtime,/mnt/home/ppbhatt500/InferenceX/srt-slurm/src/srtctl/benchmarks/scripts:/srtctl-benchmarks,/mnt/vast/dynamo-wheels-cache:/configs/dynamo-wheels,/mnt/vast/ai-perf-cache:/aiperf_mmap_cache,/mnt/home/ppbhatt500/InferenceX:/infmax-workspace --jobid 6736 -w slurm-gb300-133-191 --overlap --pty bash
+2026-06-08 00:48:44 [INFO] ============================================================
+2026-06-08 00:48:44 [INFO] 
+2026-06-08 00:48:44 [INFO] Waiting for workers to be ready...
+2026-06-08 00:48:44 [INFO] Waiting for server health (expecting 2 workers: 1P + 1D)...
+2026-06-08 00:48:44 [INFO] Polling http://slurm-gb300-133-189:8000/health every 10.0s for 1 prefills and 1 decodes
+2026-06-08 00:49:44 [INFO] Model is not ready, waiting for 1 prefills and 1 decodes. Have 0 prefills and 0 decodes.
+2026-06-08 00:50:44 [INFO] Model is not ready, waiting for 1 prefills and 1 decodes. Have 0 prefills and 0 decodes.
+2026-06-08 00:51:44 [INFO] Model is not ready, waiting for 1 prefills and 1 decodes. Have 0 prefills and 0 decodes.
+2026-06-08 00:52:44 [INFO] Model is not ready, waiting for 1 prefills and 1 decodes. Have 0 prefills and 0 decodes.
+2026-06-08 00:53:45 [INFO] Model is not ready, waiting for 1 prefills and 1 decodes. Have 0 prefills and 0 decodes.
+2026-06-08 00:54:45 [INFO] Model is not ready, waiting for 1 prefills and 1 decodes. Have 0 prefills and 0 decodes.
+2026-06-08 00:55:45 [INFO] Model is not ready, waiting for 0 prefills and 1 decodes. Have 1 prefills and 0 decodes.
+2026-06-08 00:56:45 [INFO] Model is not ready, waiting for 0 prefills and 1 decodes. Have 1 prefills and 0 decodes.
+2026-06-08 00:57:15 [INFO] Model is ready. Have 1 prefills and 1 decodes.
+2026-06-08 00:57:15 [INFO] Server is healthy - starting benchmark
+2026-06-08 00:57:15 [INFO] Running Custom benchmark
+2026-06-08 00:57:15 [INFO] Script: <custom command>
+2026-06-08 00:57:15 [INFO] Command: bash -lc 'bash /infmax-workspace/benchmarks/multi_node/agentic_replay_custom.sh'
+2026-06-08 00:57:15 [INFO] Log: /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs/benchmark.out
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2026-06-08T01:01:15.315] error: *** JOB 6736 ON slurm-gb300-133-189 CANCELLED AT 2026-06-08T01:01:15 DUE to SIGNAL Terminated ***

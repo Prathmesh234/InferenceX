@@ -1,0 +1,96 @@
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 977446
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 910163968
+open files                          (-n) 1048576
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 12500
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) unlimited
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+2026-06-08 00:30:09 [INFO] Setting up head node infrastructure for: manual
+2026-06-08 00:30:09 [INFO] Host IP: 10.0.18.231
+2026-06-08 00:30:09 [INFO] Starting NATS server...
+2026-06-08 00:30:09 [INFO] NATS server started (PID: 3354732)
+2026-06-08 00:30:09 [INFO] Starting etcd server...
+2026-06-08 00:30:09 [INFO] etcd server started (PID: 3354733)
+[3354732] 2026/06/08 00:30:09.932357 [INF] Starting nats-server
+[3354732] 2026/06/08 00:30:09.932455 [INF]   Version:  2.10.28
+[3354732] 2026/06/08 00:30:09.932458 [INF]   Git:      [e0b99bd]
+[3354732] 2026/06/08 00:30:09.932460 [INF]   Name:     NATSY2K7VOT2Y2O7GQQYCHOASW3XGAGIVWSJI2ESGRX5Z5BAXXY74WQW
+[3354732] 2026/06/08 00:30:09.932464 [INF]   Node:     qaEFPvc6
+[3354732] 2026/06/08 00:30:09.932465 [INF]   ID:       NATSY2K7VOT2Y2O7GQQYCHOASW3XGAGIVWSJI2ESGRX5Z5BAXXY74WQW
+[3354732] 2026/06/08 00:30:09.932801 [INF] Starting JetStream
+[3354732] 2026/06/08 00:30:09.932979 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
+[3354732] 2026/06/08 00:30:09.932985 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
+[3354732] 2026/06/08 00:30:09.932987 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
+[3354732] 2026/06/08 00:30:09.932989 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
+[3354732] 2026/06/08 00:30:09.932990 [INF] 
+[3354732] 2026/06/08 00:30:09.932992 [INF]          https://docs.nats.io/jetstream
+[3354732] 2026/06/08 00:30:09.932993 [INF] 
+[3354732] 2026/06/08 00:30:09.932995 [INF] ---------------- JETSTREAM ----------------
+[3354732] 2026/06/08 00:30:09.932997 [INF]   Max Memory:      716.69 GB
+[3354732] 2026/06/08 00:30:09.932999 [INF]   Max Storage:     358.35 GB
+[3354732] 2026/06/08 00:30:09.933001 [INF]   Store Directory: "/tmp/nats/jetstream"
+[3354732] 2026/06/08 00:30:09.933003 [INF] -------------------------------------------
+[3354732] 2026/06/08 00:30:09.933445 [INF] Listening for client connections on 0.0.0.0:4222
+[3354732] 2026/06/08 00:30:09.933654 [INF] Server is ready
+{"level":"warn","ts":"2026-06-08T00:30:09.964745Z","caller":"embed/config.go:689","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"info","ts":"2026-06-08T00:30:09.964861Z","caller":"etcdmain/etcd.go:73","msg":"Running: ","args":["/configs/etcd","--data-dir","/tmp/etcd","--listen-client-urls","http://0.0.0.0:2379","--advertise-client-urls","http://10.0.18.231:2379"]}
+{"level":"warn","ts":"2026-06-08T00:30:09.964911Z","caller":"embed/config.go:689","msg":"Running http and grpc server on single port. This is not recommended for production."}
+{"level":"info","ts":"2026-06-08T00:30:09.964918Z","caller":"embed/etcd.go:140","msg":"configuring peer listeners","listen-peer-urls":["http://localhost:2380"]}
+{"level":"info","ts":"2026-06-08T00:30:09.965332Z","caller":"embed/etcd.go:148","msg":"configuring client listeners","listen-client-urls":["http://0.0.0.0:2379"]}
+{"level":"info","ts":"2026-06-08T00:30:09.965441Z","caller":"embed/etcd.go:323","msg":"starting an etcd server","etcd-version":"3.5.21","git-sha":"a17edfd","go-version":"go1.23.7","go-os":"linux","go-arch":"arm64","max-cpu-set":144,"max-cpu-available":144,"member-initialized":false,"name":"default","data-dir":"/tmp/etcd","wal-dir":"","wal-dir-dedicated":"","member-dir":"/tmp/etcd/member","force-new-cluster":false,"heartbeat-interval":"100ms","election-timeout":"1s","initial-election-tick-advance":true,"snapshot-count":100000,"max-wals":5,"max-snapshots":5,"snapshot-catchup-entries":5000,"initial-advertise-peer-urls":["http://localhost:2380"],"listen-peer-urls":["http://localhost:2380"],"advertise-client-urls":["http://10.0.18.231:2379"],"listen-client-urls":["http://0.0.0.0:2379"],"listen-metrics-urls":[],"cors":["*"],"host-whitelist":["*"],"initial-cluster":"default=http://localhost:2380","initial-cluster-state":"new","initial-cluster-token":"etcd-cluster","quota-backend-bytes":2147483648,"max-request-bytes":1572864,"max-concurrent-streams":4294967295,"pre-vote":true,"initial-corrupt-check":false,"corrupt-check-time-interval":"0s","compact-check-time-enabled":false,"compact-check-time-interval":"1m0s","auto-compaction-mode":"periodic","auto-compaction-retention":"0s","auto-compaction-interval":"0s","discovery-url":"","discovery-proxy":"","downgrade-check-interval":"5s"}
+{"level":"warn","ts":"2026-06-08T00:30:09.965477Z","caller":"fileutil/fileutil.go:53","msg":"check file permission","error":"directory \"/tmp/etcd\" exist, but the permission is \"drwxrwx---\". The recommended permission is \"-rwx------\" to prevent possible unprivileged access to the data"}
+{"level":"info","ts":"2026-06-08T00:30:09.965796Z","caller":"etcdserver/backend.go:81","msg":"opened backend db","path":"/tmp/etcd/member/snap/db","took":"159.489µs"}
+{"level":"info","ts":"2026-06-08T00:30:09.967262Z","caller":"etcdserver/raft.go:506","msg":"starting local member","local-member-id":"8e9e05c52164694d","cluster-id":"cdf818194e3a8c32"}
+{"level":"info","ts":"2026-06-08T00:30:09.967361Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d switched to configuration voters=()"}
+{"level":"info","ts":"2026-06-08T00:30:09.967414Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became follower at term 0"}
+{"level":"info","ts":"2026-06-08T00:30:09.967592Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"newRaft 8e9e05c52164694d [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]"}
+{"level":"info","ts":"2026-06-08T00:30:09.967607Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became follower at term 1"}
+{"level":"info","ts":"2026-06-08T00:30:09.967632Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d switched to configuration voters=(10276657743932975437)"}
+{"level":"warn","ts":"2026-06-08T00:30:09.967838Z","caller":"auth/store.go:1241","msg":"simple token is not cryptographically signed"}
+{"level":"info","ts":"2026-06-08T00:30:09.967924Z","caller":"mvcc/kvstore.go:425","msg":"kvstore restored","current-rev":1}
+{"level":"info","ts":"2026-06-08T00:30:09.967939Z","caller":"etcdserver/server.go:628","msg":"restore consistentIndex","index":0}
+{"level":"info","ts":"2026-06-08T00:30:09.967999Z","caller":"etcdserver/quota.go:94","msg":"enabled backend quota with default value","quota-name":"v3-applier","quota-size-bytes":2147483648,"quota-size":"2.1 GB"}
+{"level":"info","ts":"2026-06-08T00:30:09.968086Z","caller":"etcdserver/server.go:875","msg":"starting etcd server","local-member-id":"8e9e05c52164694d","local-server-version":"3.5.21","cluster-version":"to_be_decided"}
+{"level":"info","ts":"2026-06-08T00:30:09.968152Z","caller":"etcdserver/server.go:759","msg":"started as single-node; fast-forwarding election ticks","local-member-id":"8e9e05c52164694d","forward-ticks":9,"forward-duration":"900ms","election-ticks":10,"election-timeout":"1s"}
+{"level":"info","ts":"2026-06-08T00:30:09.968169Z","caller":"fileutil/purge.go:50","msg":"started to purge file","dir":"/tmp/etcd/member/snap","suffix":"snap.db","max":5,"interval":"30s"}
+{"level":"info","ts":"2026-06-08T00:30:09.968192Z","caller":"v3rpc/health.go:61","msg":"grpc service status changed","service":"","status":"SERVING"}
+{"level":"info","ts":"2026-06-08T00:30:09.968272Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d switched to configuration voters=(10276657743932975437)"}
+{"level":"info","ts":"2026-06-08T00:30:09.968208Z","caller":"fileutil/purge.go:50","msg":"started to purge file","dir":"/tmp/etcd/member/snap","suffix":"snap","max":5,"interval":"30s"}
+{"level":"info","ts":"2026-06-08T00:30:09.968329Z","caller":"membership/cluster.go:421","msg":"added member","cluster-id":"cdf818194e3a8c32","local-member-id":"8e9e05c52164694d","added-peer-id":"8e9e05c52164694d","added-peer-peer-urls":["http://localhost:2380"],"added-peer-is-learner":false}
+{"level":"info","ts":"2026-06-08T00:30:09.968331Z","caller":"fileutil/purge.go:50","msg":"started to purge file","dir":"/tmp/etcd/member/wal","suffix":"wal","max":5,"interval":"30s"}
+{"level":"info","ts":"2026-06-08T00:30:09.969406Z","caller":"embed/etcd.go:633","msg":"serving peer traffic","address":"127.0.0.1:2380"}
+{"level":"info","ts":"2026-06-08T00:30:09.969756Z","caller":"embed/etcd.go:603","msg":"cmux::serve","address":"127.0.0.1:2380"}
+{"level":"info","ts":"2026-06-08T00:30:09.969792Z","caller":"embed/etcd.go:292","msg":"now serving peer/client/metrics","local-member-id":"8e9e05c52164694d","initial-advertise-peer-urls":["http://localhost:2380"],"listen-peer-urls":["http://localhost:2380"],"advertise-client-urls":["http://10.0.18.231:2379"],"listen-client-urls":["http://0.0.0.0:2379"],"listen-metrics-urls":[]}
+2026-06-08 00:30:10 [INFO] NATS is ready on port 4222
+2026-06-08 00:30:10 [INFO] etcd is ready on port 2379
+2026-06-08 00:30:10 [INFO] Head node infrastructure is ready
+2026-06-08 00:30:10 [INFO]   NATS: nats://localhost:4222
+2026-06-08 00:30:10 [INFO]   etcd: http://localhost:2379
+{"level":"info","ts":"2026-06-08T00:30:10.768740Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d is starting a new election at term 1"}
+{"level":"info","ts":"2026-06-08T00:30:10.768790Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became pre-candidate at term 1"}
+{"level":"info","ts":"2026-06-08T00:30:10.768833Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d received MsgPreVoteResp from 8e9e05c52164694d at term 1"}
+{"level":"info","ts":"2026-06-08T00:30:10.768845Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became candidate at term 2"}
+{"level":"info","ts":"2026-06-08T00:30:10.768851Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d received MsgVoteResp from 8e9e05c52164694d at term 2"}
+{"level":"info","ts":"2026-06-08T00:30:10.768858Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became leader at term 2"}
+{"level":"info","ts":"2026-06-08T00:30:10.768864Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"raft.node: 8e9e05c52164694d elected leader 8e9e05c52164694d at term 2"}
+{"level":"info","ts":"2026-06-08T00:30:10.769112Z","caller":"etcdserver/server.go:2144","msg":"published local member to cluster through raft","local-member-id":"8e9e05c52164694d","local-member-attributes":"{Name:default ClientURLs:[http://10.0.18.231:2379]}","request-path":"/0/members/8e9e05c52164694d/attributes","cluster-id":"cdf818194e3a8c32","publish-timeout":"7s"}
+{"level":"info","ts":"2026-06-08T00:30:10.769180Z","caller":"etcdserver/server.go:2697","msg":"setting up initial cluster version using v2 API","cluster-version":"3.5"}
+{"level":"info","ts":"2026-06-08T00:30:10.769164Z","caller":"embed/serve.go:124","msg":"ready to serve client requests"}
+{"level":"info","ts":"2026-06-08T00:30:10.769272Z","caller":"membership/cluster.go:587","msg":"set initial cluster version","cluster-id":"cdf818194e3a8c32","local-member-id":"8e9e05c52164694d","cluster-version":"3.5"}
+{"level":"info","ts":"2026-06-08T00:30:10.769331Z","caller":"api/capability.go:75","msg":"enabled capabilities for version","cluster-version":"3.5"}
+{"level":"info","ts":"2026-06-08T00:30:10.769284Z","caller":"etcdmain/main.go:44","msg":"notifying init daemon"}
+{"level":"info","ts":"2026-06-08T00:30:10.769358Z","caller":"etcdmain/main.go:50","msg":"successfully notified init daemon"}
+{"level":"info","ts":"2026-06-08T00:30:10.769349Z","caller":"etcdserver/server.go:2721","msg":"cluster version is updated","cluster-version":"3.5"}
+{"level":"info","ts":"2026-06-08T00:30:10.769533Z","caller":"v3rpc/health.go:61","msg":"grpc service status changed","service":"","status":"SERVING"}
+{"level":"info","ts":"2026-06-08T00:30:10.769784Z","caller":"embed/serve.go:210","msg":"serving client traffic insecurely; this is strongly discouraged!","traffic":"grpc+http","address":"[::]:2379"}
+[2026-06-08T00:42:29.468] error: *** STEP 6730.2 ON slurm-gb300-133-189 CANCELLED AT 2026-06-08T00:42:29 DUE to SIGNAL Killed ***

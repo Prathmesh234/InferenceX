@@ -1,0 +1,6 @@
+pyxis: importing docker image: nginx:1.27.4
+pyxis: imported docker image: nginx:1.27.4
+2026/06/08 00:48:54 [error] 3372247#3372247: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.18.231, server: , request: "GET /health HTTP/1.1", upstream: "http://10.0.1.197:8180/health", host: "slurm-gb300-133-189:8000"
+2026/06/08 00:49:04 [error] 3372247#3372247: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.18.231, server: , request: "GET /health HTTP/1.1", upstream: "http://10.0.1.197:8180/health", host: "slurm-gb300-133-189:8000"
+2026/06/08 00:49:14 [error] 3372247#3372247: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 10.0.18.231, server: , request: "GET /health HTTP/1.1", upstream: "http://10.0.1.197:8180/health", host: "slurm-gb300-133-189:8000"
+[2026-06-08T01:01:15.317] error: *** STEP 6736.10 ON slurm-gb300-133-189 CANCELLED AT 2026-06-08T01:01:15 DUE to SIGNAL Terminated ***

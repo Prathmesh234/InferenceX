@@ -21,7 +21,7 @@ dynamo:
 setup_script: vllm-container-deps.sh
 
 slurm:
-  time_limit: "8:00:00"
+  time_limit: "24:00:00"
 
 health_check:
   max_attempts: 1440
@@ -133,4 +133,6 @@ benchmark:
     RESULT_DIR: /mnt/home/ppbhatt500/gpumode-triton/results/dsv4_vllm_4p_8d
     PORT: "8000"
     IS_MULTINODE: "true"
-    CONCURRENCIES: "4,8,16"
+    CONCURRENCIES: "4,8,16,32,64,128"
+    DATASET: /infmax-workspace/utils/custom_replay/batch_long.replay.jsonl
+    WARMUP_SESSIONS: "15"

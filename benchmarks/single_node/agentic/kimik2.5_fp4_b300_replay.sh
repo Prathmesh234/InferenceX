@@ -30,6 +30,7 @@ check_env_vars MODEL TP DATASET RESULT_DIR
 OFFLOADING="${OFFLOADING:-none}"
 CONCURRENCIES="${CONCURRENCIES:-1,2,4,8,16,32,64,128}"
 WARMUP="${WARMUP:-1}"          # 1 = prime prefix cache before each point (default on)
+WARMUP_SESSIONS="${WARMUP_SESSIONS:-0}"   # >0 = warmup only first N sessions (cheap prime)
 # server max batch must cover the largest concurrency we sweep
 MAX_NUM_SEQS=$(echo "$CONCURRENCIES" | tr ',' '\n' | sort -n | tail -1)
 
@@ -126,6 +127,8 @@ WARMUP_FLAG=()
     --concurrencies "$CONCURRENCIES" \
     --result-dir "$RESULT_DIR" \
     --title "Kimi-K2.5 NVFP4 vLLM TP$TP — $(basename "$DATASET")" \
+    --warmup-sessions "$WARMUP_SESSIONS" \
+    --prom-url "http://0.0.0.0:$PORT/metrics" \
     "${WARMUP_FLAG[@]}"
 
 stop_gpu_monitor || true

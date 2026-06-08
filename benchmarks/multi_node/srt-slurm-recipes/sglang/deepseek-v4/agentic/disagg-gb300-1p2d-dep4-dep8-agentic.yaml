@@ -37,6 +37,9 @@ resources:
   decode_workers: 1
   gpus_per_decode: 8
 
+slurm:
+  time_limit: "24:00:00"
+
 backend:
   type: sglang
 
@@ -103,7 +106,7 @@ backend:
 
       moe-a2a-backend: "megamoe"
 
-      mem-fraction-static: 0.9
+      mem-fraction-static: 0.88
       max-running-requests: 256
       cuda-graph-max-bs: 256
       chunked-prefill-size: 32768
@@ -132,7 +135,7 @@ backend:
       speculative-eagle-topk: 1
       speculative-num-draft-tokens: 4
 
-      mem-fraction-static: 0.94
+      mem-fraction-static: 0.88
       max-running-requests: 3072
       cuda-graph-max-bs: 256
       swa-full-tokens-ratio: 0.15
@@ -144,6 +147,8 @@ benchmark:
   command: bash /infmax-workspace/benchmarks/multi_node/agentic_replay_custom.sh
   env:
     INFMAX_CONTAINER_WORKSPACE: /infmax-workspace
-    RESULT_DIR: /logs/dsv4_sglang_4p_8d
+    RESULT_DIR: /mnt/home/ppbhatt500/gpumode-triton/results/dsv4_sglang_4p_8d
     PORT: "8000"
-    CONCURRENCIES: "4,8,16"
+    CONCURRENCIES: "4,8,16,32,64,128"
+    DATASET: /infmax-workspace/utils/custom_replay/batch_long.replay.jsonl
+    WARMUP_SESSIONS: "15"

@@ -15,7 +15,7 @@ dynamo:
   install: true
 
 slurm:
-  time_limit: "03:00:00"
+  time_limit: "24:00:00"
 
 sbatch_directives:
   cpus-per-task: "144"
@@ -90,7 +90,7 @@ backend:
       moe-runner-backend: "flashinfer_mxfp4"
       disable-flashinfer-autotune: true
 
-      mem-fraction-static: 0.90
+      mem-fraction-static: 0.8
       max-running-requests: 512
       cuda-graph-max-bs: 512
       chunked-prefill-size: 32768
@@ -111,7 +111,7 @@ backend:
       moe-runner-backend: "flashinfer_mxfp4"
       disable-flashinfer-autotune: true
 
-      mem-fraction-static: 0.9
+      mem-fraction-static: 0.8
       max-running-requests: 1024
       cuda-graph-max-bs:    512
       swa-full-tokens-ratio: 0.1
@@ -122,6 +122,8 @@ benchmark:
   command: bash /infmax-workspace/benchmarks/multi_node/agentic_replay_custom.sh
   env:
     INFMAX_CONTAINER_WORKSPACE: /infmax-workspace
-    RESULT_DIR: /logs/dsv4_sglang_4p_4d
+    RESULT_DIR: /mnt/home/ppbhatt500/gpumode-triton/results/dsv4_sglang_4p_4d
     PORT: "8000"
-    CONCURRENCIES: "4,8,16"
+    CONCURRENCIES: "4,8,16,32,64,128"
+    DATASET: /infmax-workspace/utils/custom_replay/batch_long.replay.jsonl
+    WARMUP_SESSIONS: "15"

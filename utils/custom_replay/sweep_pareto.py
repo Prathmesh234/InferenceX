@@ -44,6 +44,10 @@ def run_one(conc: int, args) -> dict:
     ]
     if args.warmup:
         cmd.append("--warmup")
+    if args.warmup_sessions:
+        cmd += ["--warmup-sessions", str(args.warmup_sessions)]
+    if args.prom_url:
+        cmd += ["--prom-url", args.prom_url]
     if args.use_think_time:
         cmd.append("--use-think-time")
     if args.extra_body:
@@ -59,8 +63,9 @@ def write_csv(rows: list[dict], path: Path):
     cols = ["concurrency", "completed_turns", "failed_turns",
             "request_throughput_per_s", "output_throughput_tok_per_s",
             "total_token_throughput_tok_per_s",
-            "ttft_p50_ms", "ttft_p99_ms", "tpot_p50_ms", "tpot_p99_ms",
-            "e2e_p50_ms", "e2e_p99_ms", "isl_median", "osl_median",
+            "ttft_p50_ms", "ttft_p95_ms", "ttft_p99_ms",
+            "tpot_p50_ms", "tpot_p95_ms", "tpot_p99_ms",
+            "e2e_p50_ms", "e2e_p95_ms", "e2e_p99_ms", "isl_median", "osl_median",
             "cache_hit_rate"]
     with open(path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols)
@@ -73,9 +78,12 @@ def write_csv(rows: list[dict], path: Path):
                 "request_throughput_per_s": s["request_throughput_per_s"],
                 "output_throughput_tok_per_s": s["output_throughput_tok_per_s"],
                 "total_token_throughput_tok_per_s": s["total_token_throughput_tok_per_s"],
-                "ttft_p50_ms": s["ttft_ms"]["p50"], "ttft_p99_ms": s["ttft_ms"]["p99"],
-                "tpot_p50_ms": s["tpot_ms"]["p50"], "tpot_p99_ms": s["tpot_ms"]["p99"],
-                "e2e_p50_ms": s["e2e_ms"]["p50"], "e2e_p99_ms": s["e2e_ms"]["p99"],
+                "ttft_p50_ms": s["ttft_ms"]["p50"], "ttft_p95_ms": s["ttft_ms"].get("p95"),
+                "ttft_p99_ms": s["ttft_ms"]["p99"],
+                "tpot_p50_ms": s["tpot_ms"]["p50"], "tpot_p95_ms": s["tpot_ms"].get("p95"),
+                "tpot_p99_ms": s["tpot_ms"]["p99"],
+                "e2e_p50_ms": s["e2e_ms"]["p50"], "e2e_p95_ms": s["e2e_ms"].get("p95"),
+                "e2e_p99_ms": s["e2e_ms"]["p99"],
                 "isl_median": s["isl"]["median"], "osl_median": s["osl"]["median"],
                 "cache_hit_rate": s["cache_hit_rate"],
             })
@@ -89,32 +97,25 @@ def plot_pareto(rows: list[dict], path: Path, title: str):
     rows = sorted(rows, key=lambda s: s["concurrency"])
     thr = [s["output_throughput_tok_per_s"] for s in rows]
     conc = [s["concurrency"] for s in rows]
-    ttft_p50 = [s["ttft_ms"]["p50"] for s in rows]
     ttft_p99 = [s["ttft_ms"]["p99"] for s in rows]
-    tpot_p50 = [s["tpot_ms"]["p50"] for s in rows]
     tpot_p99 = [s["tpot_ms"]["p99"] for s in rows]
 
-    # Lead with the median (p50) — it's the robust, steady-state latency. The p99
-    # tail is plotted lightly/dashed for honesty: at low concurrency on an
-    # unsaturated server p99 is dominated by a handful of cold-start outliers and
-    # is noisy, so it must not be the headline curve.
+    # Throughput (y) vs latency (x): y = output throughput, x = p99 TTFT / TPOT.
     panels = (
-        (ttft_p50, ttft_p99, "TTFT (ms)"),
-        (tpot_p50, tpot_p99, "TPOT (ms)"),
+        (ttft_p99, "TTFT (ms)"),
+        (tpot_p99, "TPOT (ms)"),
     )
     fig, ax = plt.subplots(1, 2, figsize=(13, 5.2))
-    for a, (p50, p99, lab) in zip(ax, panels):
-        a.plot(thr, p50, "-o", color="#c25a3a", lw=2, label="p50 (median)")
-        a.plot(thr, p99, "--o", color="#c25a3a", lw=1, alpha=0.35,
-               markersize=4, label="p99 (tail)")
-        for x, yy, c in zip(thr, p50, conc):
-            a.annotate(f"c{c}", (x, yy), textcoords="offset points",
+    for a, (p99, lab) in zip(ax, panels):
+        a.plot(p99, thr, "-o", color="#c25a3a", lw=2, label="p99 (tail)")
+        for xx, yy, c in zip(p99, thr, conc):
+            a.annotate(f"c{c}", (xx, yy), textcoords="offset points",
                        xytext=(6, 4), fontsize=8)
-        a.set_xlabel("Output throughput (tok/s)")
-        a.set_ylabel(lab)
+        a.set_xlabel(lab)
+        a.set_ylabel("Output throughput (tok/s)")
         a.grid(True, alpha=0.3)
         a.legend(fontsize=8, loc="best")
-        a.set_title(lab + " vs throughput")
+        a.set_title("throughput vs " + lab)
     fig.suptitle(title)
     fig.tight_layout()
     fig.savefig(path, dpi=130)
@@ -134,6 +135,12 @@ def parse_args():
                     help="prime the server prefix cache with one untimed pass "
                          "before EACH concurrency point's measured pass, so every "
                          "point starts from the same warm cache state.")
+    ap.add_argument("--warmup-sessions", type=int, default=0,
+                    help="if >0, each warmup pass covers only the first N sessions "
+                         "(a cheap prime) instead of the whole dataset.")
+    ap.add_argument("--prom-url", default=None,
+                    help="Prometheus /metrics URL; scraped before/after each "
+                         "concurrency point's measured pass into c<conc>_prom.json.")
     ap.add_argument("--request-timeout", type=float, default=1800)
     ap.add_argument("--use-think-time", action="store_true")
     ap.add_argument("--extra-body", default=None)

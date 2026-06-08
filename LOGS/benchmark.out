@@ -1,0 +1,46 @@
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 977446
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 910163968
+open files                          (-n) 1048576
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 12500
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) unlimited
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
++ WS=/infmax-workspace
++ RESULT_DIR=/logs/dsv4_sglang_4p_4d
++ REPLAY_DIR=/infmax-workspace/utils/custom_replay
++ DATASET=/infmax-workspace/utils/custom_replay/batch_3x.replay.jsonl
++ CONCURRENCIES=4,8,16
++ mkdir -p /logs/dsv4_sglang_4p_4d
++ read -r BASE MODEL_ID
+++ PORT=8000
+++ python3 -
++ '[' -z http://localhost:8000 ']'
++ echo '[replay] endpoint=http://localhost:8000  model=deepseek-ai/DeepSeek-V4-Pro  dataset=/infmax-workspace/utils/custom_replay/batch_3x.replay.jsonl  result=/logs/dsv4_sglang_4p_4d'
+[replay] endpoint=http://localhost:8000  model=deepseek-ai/DeepSeek-V4-Pro  dataset=/infmax-workspace/utils/custom_replay/batch_3x.replay.jsonl  result=/logs/dsv4_sglang_4p_4d
++ python3 -m venv --system-site-packages /logs/dsv4_sglang_4p_4d/.rvenv
++ /logs/dsv4_sglang_4p_4d/.rvenv/bin/pip install -q -r /infmax-workspace/utils/custom_replay/requirements.txt
++ REPLAY_PY=/logs/dsv4_sglang_4p_4d/.rvenv/bin/python
++ SCRAPE_URLS=http://localhost:8000/metrics
++ '[' -n '' ']'
++ echo '[replay] scraping metrics: http://localhost:8000/metrics -> /logs/dsv4_sglang_4p_4d/server_metrics.prom'
+[replay] scraping metrics: http://localhost:8000/metrics -> /logs/dsv4_sglang_4p_4d/server_metrics.prom
++ SCRAPE_PID=3365389
++ trap 'kill "$SCRAPE_PID" 2>/dev/null || true' EXIT
++ /logs/dsv4_sglang_4p_4d/.rvenv/bin/python /infmax-workspace/utils/custom_replay/scrape_metrics.py --urls http://localhost:8000/metrics --out /logs/dsv4_sglang_4p_4d/server_metrics.prom --interval 15
++ /logs/dsv4_sglang_4p_4d/.rvenv/bin/python /infmax-workspace/utils/custom_replay/sweep_pareto.py --dataset /infmax-workspace/utils/custom_replay/batch_3x.replay.jsonl --base-url http://localhost:8000 --endpoint /v1/chat/completions --model deepseek-ai/DeepSeek-V4-Pro --concurrencies 4,8,16 --warmup --result-dir /logs/dsv4_sglang_4p_4d
+
+===== concurrency 4 =====
+[scrape_metrics] polling ['http://localhost:8000/metrics'] every 15.0s -> /logs/dsv4_sglang_4p_4d/server_metrics.prom
+[replay] concurrency 4: replaying 60 sessions / 696 turns to completion (no time limit) [+warmup]
+[replay] warmup: untimed pass over 60 sessions / 696 turns to prime the prefix cache...
+[2026-06-08T00:42:29.766] error: *** STEP 6730.12 ON slurm-gb300-133-189 CANCELLED AT 2026-06-08T00:42:29 DUE to SIGNAL Killed ***

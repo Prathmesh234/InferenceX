@@ -1,0 +1,50 @@
+{
+  "concurrency": 4,
+  "runtime_s": 0.21,
+  "completed_turns": 0,
+  "failed_turns": 696,
+  "request_throughput_per_s": 0.0,
+  "output_throughput_tok_per_s": 0.0,
+  "total_token_throughput_tok_per_s": 0.0,
+  "ttft_ms": {
+    "mean": 0,
+    "p50": 0.0,
+    "p90": 0.0,
+    "p99": 0.0
+  },
+  "tpot_ms": {
+    "mean": 0,
+    "p50": 0.0,
+    "p99": 0.0
+  },
+  "itl_ms": {
+    "mean": 0,
+    "p99": 0.0
+  },
+  "e2e_ms": {
+    "mean": 0,
+    "p50": 0.0,
+    "p99": 0.0
+  },
+  "isl": {
+    "mean": 0,
+    "median": 0,
+    "p95": 0
+  },
+  "osl": {
+    "mean": 0,
+    "median": 0,
+    "p95": 0
+  },
+  "cache_hit_rate": 0.0,
+  "cached_tokens_total": 0,
+  "input_tokens_total": 0,
+  "output_tokens_total": 0,
+  "errors_sample": [
+    "ClientConnectorError: Cannot connect to host localhost:8000 ssl:default [Multiple exceptions: [Errno 111] Connect call failed ('::1', 8000, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 8000)]",
+    "ClientConnectorError: Cannot connect to host localhost:8000 ssl:default [Multiple exceptions: [Errno 111] Connect call failed ('127.0.0.1', 8000), [Errno 111] Connect call failed ('::1', 8000, 0, 0)]",
+    "ClientConnectorError: Cannot connect to host localhost:8000 ssl:default [Multiple exceptions: [Errno 111] Connect call failed ('::1', 8000, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 8000)]",
+    "ClientConnectorError: Cannot connect to host localhost:8000 ssl:default [Multiple exceptions: [Errno 111] Connect call failed ('127.0.0.1', 8000), [Errno 111] Connect call failed ('::1', 8000, 0, 0)]",
+    "ClientConnectorError: Cannot connect to host localhost:8000 ssl:default [Multiple exceptions: [Errno 111] Connect call failed ('::1', 8000, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 8000)]"
+  ]
+}

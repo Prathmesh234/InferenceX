@@ -289,6 +289,12 @@ echo "$SRTCTL_OUTPUT"
 
 JOB_ID=$(echo "$SRTCTL_OUTPUT" | grep -oP '✅ Job \K[0-9]+' || echo "$SRTCTL_OUTPUT" | grep -oP 'Job \K[0-9]+')
 
+# Move the login-node x86 .venv aside so the aarch64 compute job's uv builds and
+# uses its own .venv-compute (via UV_PROJECT_ENVIRONMENT) instead of grabbing
+# this x86 .venv (the vllm-ref orchestrator did -> "Exec format error"). Harmless
+# to the sglang ref; srtctl already ran, the driver only babysits from here.
+[ -d .venv ] && mv .venv .venv-login 2>/dev/null || true
+
 set +x
 
 if [ -z "$JOB_ID" ]; then

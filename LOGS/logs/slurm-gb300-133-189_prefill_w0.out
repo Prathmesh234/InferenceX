@@ -1,0 +1,562 @@
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 977446
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 910163968
+open files                          (-n) 1048576
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 12500
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) unlimited
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+Installing dynamo from source (81d0555ee23519cea80a42b4fe824e30368b7300, /configs cache)...
+Processing /configs/dynamo-wheels/81d0555ee23519cea80a42b4fe824e30368b7300/ai_dynamo_runtime-1.2.0-cp310-abi3-manylinux_2_39_aarch64.whl
+Collecting pydantic<=2.13,>=2.10.6 (from ai-dynamo-runtime==1.2.0)
+  Downloading pydantic-2.13.0-py3-none-any.whl.metadata (107 kB)
+Collecting uvloop>=0.21.0 (from ai-dynamo-runtime==1.2.0)
+  Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (4.9 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0)
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.0 (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0)
+  Downloading pydantic_core-2.46.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.6 kB)
+Collecting typing-extensions>=4.14.1 (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0)
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0)
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Downloading pydantic-2.13.0-py3-none-any.whl (471 kB)
+Downloading pydantic_core-2.46.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 27.0 MB/s  0:00:00
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading uvloop-0.22.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (4.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 58.3 MB/s  0:00:00
+Installing collected packages: uvloop, typing-extensions, annotated-types, typing-inspection, pydantic-core, pydantic, ai-dynamo-runtime
+  Attempting uninstall: uvloop
+    Found existing installation: uvloop 0.22.1
+    Uninstalling uvloop-0.22.1:
+      Successfully uninstalled uvloop-0.22.1
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.15.0
+    Uninstalling typing_extensions-4.15.0:
+      Successfully uninstalled typing_extensions-4.15.0
+  Attempting uninstall: annotated-types
+    Found existing installation: annotated-types 0.7.0
+    Uninstalling annotated-types-0.7.0:
+      Successfully uninstalled annotated-types-0.7.0
+  Attempting uninstall: typing-inspection
+    Found existing installation: typing-inspection 0.4.2
+    Uninstalling typing-inspection-0.4.2:
+      Successfully uninstalled typing-inspection-0.4.2
+  Attempting uninstall: pydantic-core
+    Found existing installation: pydantic_core 2.46.4
+    Uninstalling pydantic_core-2.46.4:
+      Successfully uninstalled pydantic_core-2.46.4
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 2.13.4
+    Uninstalling pydantic-2.13.4:
+      Successfully uninstalled pydantic-2.13.4
+
+Successfully installed ai-dynamo-runtime-1.2.0 annotated-types-0.7.0 pydantic-2.13.0 pydantic-core-2.46.0 typing-extensions-4.15.0 typing-inspection-0.4.2 uvloop-0.22.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Obtaining file:///tmp/dynamo-src/dynamo
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: ai-dynamo-runtime==1.2.0 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo==1.2.0) (1.2.0)
+Requirement already satisfied: aiohttp<4.0,>=3.9.0 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo==1.2.0) (3.14.0)
+Collecting kubernetes<33.0.0,>=32.0.1 (from ai-dynamo==1.2.0)
+  Downloading kubernetes-32.0.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting msgpack==1.1.2 (from ai-dynamo==1.2.0)
+  Downloading msgpack-1.1.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (8.1 kB)
+Requirement already satisfied: msgspec>=0.19.0 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo==1.2.0) (0.21.1)
+Requirement already satisfied: prometheus-client<1.0,>=0.23.1 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo==1.2.0) (0.25.0)
+Requirement already satisfied: pyzmq>=26.0.0 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo==1.2.0) (27.1.0)
+Requirement already satisfied: transformers>=4.56.0 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo==1.2.0) (5.8.1)
+Requirement already satisfied: pydantic<=2.13,>=2.10.6 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo-runtime==1.2.0->ai-dynamo==1.2.0) (2.13.0)
+Requirement already satisfied: uvloop>=0.21.0 in /usr/local/lib/python3.12/dist-packages (from ai-dynamo-runtime==1.2.0->ai-dynamo==1.2.0) (0.22.1)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (2.6.2)
+Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (6.7.1)
+Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (0.5.2)
+Requirement already satisfied: typing_extensions>=4.4 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (4.15.0)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.12/dist-packages (from aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (1.24.2)
+Requirement already satisfied: certifi>=14.05.14 in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (2026.5.20)
+Requirement already satisfied: six>=1.9.0 in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (1.17.0)
+Requirement already satisfied: python-dateutil>=2.5.3 in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (2.9.0.post0)
+Requirement already satisfied: pyyaml>=5.4.1 in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (6.0.1)
+Requirement already satisfied: google-auth>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (2.53.0)
+Collecting websocket-client!=0.40.0,!=0.41.*,!=0.42.*,>=0.32.0 (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0)
+  Downloading websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (2.34.2)
+Collecting requests-oauthlib (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0)
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: oauthlib>=3.2.2 in /usr/lib/python3/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (3.2.2)
+Requirement already satisfied: urllib3>=1.24.2 in /usr/local/lib/python3.12/dist-packages (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (2.7.0)
+Collecting durationpy>=0.7 (from kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0)
+  Downloading durationpy-0.10-py3-none-any.whl.metadata (340 bytes)
+Requirement already satisfied: annotated-types>=0.6.0 in /usr/local/lib/python3.12/dist-packages (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0->ai-dynamo==1.2.0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.46.0 in /usr/local/lib/python3.12/dist-packages (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0->ai-dynamo==1.2.0) (2.46.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in /usr/local/lib/python3.12/dist-packages (from pydantic<=2.13,>=2.10.6->ai-dynamo-runtime==1.2.0->ai-dynamo==1.2.0) (0.4.2)
+Requirement already satisfied: idna>=2.0 in /usr/local/lib/python3.12/dist-packages (from yarl<2.0,>=1.17.0->aiohttp<4.0,>=3.9.0->ai-dynamo==1.2.0) (3.17)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /usr/local/lib/python3.12/dist-packages (from google-auth>=1.0.1->kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (0.4.2)
+Requirement already satisfied: cryptography>=38.0.3 in /usr/lib/python3/dist-packages (from google-auth>=1.0.1->kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (41.0.7)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in /usr/local/lib/python3.12/dist-packages (from pyasn1-modules>=0.2.1->google-auth>=1.0.1->kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (0.6.3)
+Requirement already satisfied: huggingface-hub<2.0,>=1.5.0 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (1.17.0)
+Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (2.3.5)
+Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (26.2)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (2026.5.9)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (0.22.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (0.7.0)
+Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.12/dist-packages (from transformers>=4.56.0->ai-dynamo==1.2.0) (4.67.3)
+Requirement already satisfied: click>=8.4.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (8.4.1)
+Requirement already satisfied: filelock>=3.10.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (3.29.0)
+Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (2026.2.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.4.3 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (1.5.0)
+Requirement already satisfied: httpx<1,>=0.23.0 in /usr/local/lib/python3.12/dist-packages (from huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (0.28.1)
+Requirement already satisfied: anyio in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (4.13.0)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.12/dist-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.12/dist-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.5.0->transformers>=4.56.0->ai-dynamo==1.2.0) (0.16.0)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers>=4.56.0->ai-dynamo==1.2.0) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.12/dist-packages (from typer->transformers>=4.56.0->ai-dynamo==1.2.0) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.12/dist-packages (from typer->transformers>=4.56.0->ai-dynamo==1.2.0) (0.0.4)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers>=4.56.0->ai-dynamo==1.2.0) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.12/dist-packages (from rich>=13.8.0->typer->transformers>=4.56.0->ai-dynamo==1.2.0) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.12/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers>=4.56.0->ai-dynamo==1.2.0) (0.1.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.12/dist-packages (from requests->kubernetes<33.0.0,>=32.0.1->ai-dynamo==1.2.0) (3.4.7)
+Downloading msgpack-1.1.2-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (417 kB)
+Downloading kubernetes-32.0.1-py2.py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 17.3 MB/s  0:00:00
+Downloading durationpy-0.10-py3-none-any.whl (3.9 kB)
+Downloading websocket_client-1.9.0-py3-none-any.whl (82 kB)
+Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Building wheels for collected packages: ai-dynamo
+  Building editable for ai-dynamo (pyproject.toml): started
+  Building editable for ai-dynamo (pyproject.toml): finished with status 'done'
+  Created wheel for ai-dynamo: filename=ai_dynamo-1.2.0-py3-none-any.whl size=13060 sha256=96fda0210bcc138b72fed54e5ce4ce2af2f749dc11b6864fbe5c93c19ff6ffab
+  Stored in directory: /tmp/pip-ephem-wheel-cache-igej2xld/wheels/7e/00/26/5bfea8f031644d0543b9fdaa41f76c87c8d52b1d936ec635f5
+Successfully built ai-dynamo
+Installing collected packages: durationpy, websocket-client, msgpack, requests-oauthlib, kubernetes, ai-dynamo
+
+Successfully installed ai-dynamo-1.2.0 durationpy-0.10 kubernetes-32.0.1 msgpack-1.1.2 requests-oauthlib-2.0.0 websocket-client-1.9.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+Dynamo installed from source (81d0555ee23519cea80a42b4fe824e30368b7300)
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torchao/quantization/quant_api.py:1731: SyntaxWarning: invalid escape sequence '\.'
+  """Configuration class for applying different quantization configs to modules or parameters based on their fully qualified names (FQNs).
+[2m2026-06-08T00:49:27.589003Z[0m [33m WARN[0m [2m__init__[0m[2m:[0m dynamo.nixl_connect: Failed to load CuPy for GPU acceleration, utilizing numpy to provide CPU based operations.
+[2m2026-06-08T00:49:31.743552Z[0m [33m WARN[0m [2mencode_worker_handler[0m[2m:[0m Failed to import cupy, falling back to numpy: No module named 'cupy'.
+[2m2026-06-08T00:49:31.746886Z[0m [33m WARN[0m [2mworker_handler[0m[2m:[0m Failed to import cupy, falling back to numpy: No module named 'cupy'.
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2m2026-06-08T00:49:32.127982Z[0m [32m INFO[0m [2mmodel_config.__init__[0m[2m:[0m Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2m2026-06-08T00:49:32.128282Z[0m [32m INFO[0m [2mmodel_config._derive_hybrid_model[0m[2m:[0m Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[2m2026-06-08T00:49:32.181020Z[0m [32m INFO[0m [2mdeepseek_v4_hook.apply_deepseek_v4_defaults[0m[2m:[0m Use dsv4 attention backend for DeepseekV4ForCausalLM, setting page_size to 256.
+[2m2026-06-08T00:49:32.181118Z[0m [33m WARN[0m [2mdeepseek_v4_hook.apply_deepseek_v4_defaults[0m[2m:[0m Setting KV cache dtype to fp8_e4m3 for DeepseekV4ForCausalLM.
+[2m2026-06-08T00:49:32.181174Z[0m [32m INFO[0m [2mdeepseek_v4_hook.apply_deepseek_v4_defaults[0m[2m:[0m Setting swa_full_tokens_ratio to 0.1 for DeepseekV4ForCausalLM.
+[2m2026-06-08T00:49:32.187246Z[0m [33m WARN[0m [2mserver_args._validate_ib_devices[0m[2m:[0m No IB devices specified for Mooncake backend, falling back to auto discovery.
+[2m2026-06-08T00:49:32.187486Z[0m [32m INFO[0m [2margs.parse_args[0m[2m:[0m Using dynamo's built in tokenizer
+[2m2026-06-08T00:49:32.187554Z[0m [32m INFO[0m [2margs.parse_args[0m[2m:[0m Derived use_kv_events=False from kv_events_config=None
+[2m2026-06-08T00:49:32.871541Z[0m [33m WARN[0m [2mconfig_dumper._preprocess_for_encode[0m[2m:[0m Unknown type <class 'dynamo.sglang.args.DynamoConfig'>, using __dict__ or str(obj)
+[2m2026-06-08T00:49:32.872760Z[0m [32m INFO[0m [2mconfig_dumper.dump_config[0m[2m:[0m Dumped config to /mnt/home/ppbhatt500/InferenceX/srt-slurm/outputs/6736/logs/slurm-gb300-133-189_config.json
+[2m2026-06-08T00:49:32.913999Z[0m [32m INFO[0m [2mdynamo_runtime::distributed[0m[2m:[0m Initializing KV store discovery backend: Etcd(http://slurm-gb300-133-189:2379)
+[2m2026-06-08T00:49:32.918075Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::manager[0m[2m:[0m Initializing NetworkManager with NATS request plane [3mmode[0m[2m=[0mnats
+[2m2026-06-08T00:49:32.922983Z[0m [32m INFO[0m [2mdynamo_runtime::system_status_server[0m[2m:[0m [spawn_system_status_server] binding to: 0.0.0.0:7500
+[2m2026-06-08T00:49:32.923107Z[0m [32m INFO[0m [2mdynamo_runtime::system_status_server[0m[2m:[0m [spawn_system_status_server] system status server bound to: 0.0.0.0:7500
+[2m2026-06-08T00:49:32.923168Z[0m [32m INFO[0m [2mdynamo_runtime::distributed[0m[2m:[0m System status server started successfully on 0.0.0.0:7500
+[2m2026-06-08T00:49:32.923345Z[0m [32m INFO[0m [2mmain.worker[0m[2m:[0m Signal handlers set up for graceful shutdown (discovery unregister + grace period, with chaining)
+[2m2026-06-08T00:49:32.936103Z[0m [32m INFO[0m [2mengine.__init__[0m[2m:[0m server_args=ServerArgs(model_path='/model', tokenizer_path='/model', tokenizer_mode='auto', tokenizer_backend='huggingface', tokenizer_worker_num=1, detokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=True, context_length=None, is_embedding=False, prefill_only_disable_kv_cache=False, enable_multimodal=None, revision=None, model_impl='auto', model_config_parser='auto', host='0.0.0.0', port=6100, fastapi_root_path='', grpc_mode=False, skip_server_warmup=False, warmups=None, nccl_port=None, checkpoint_engine_wait_weights_before_ready=False, ssl_keyfile=None, ssl_certfile=None, ssl_ca_certs=None, ssl_keyfile_password=None, enable_ssl_refresh=False, enable_http2=False, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='fp8_e4m3', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, mem_fraction_static=0.9, max_running_requests=512, max_queued_requests=None, max_total_tokens=None, chunked_prefill_size=32768, enable_dynamic_chunking=False, max_prefill_tokens=16384, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, disable_priority_preemption=False, default_priority_value=None, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, schedule_conservativeness=1.0, page_size=256, swa_full_tokens_ratio=0.1, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, prefill_delayer_queue_min_ratio=None, prefill_delayer_max_delay_ms=None, device='cuda', tp_size=4, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, stream_interval=1, batch_notify_size=16, stream_response_default_include_usage=False, incremental_streaming_output=True, enable_streaming_session=False, random_seed=624950466, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, watchdog_timeout=300, soft_watchdog_timeout=None, dist_timeout=None, download_dir=None, model_checksum=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, load_snapshot_publish_interval=15, use_ray=False, custom_sigquit_handler=None, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=False, grpc_http_sidecar_port=None, enable_mfu_metrics=False, enable_metrics_for_all_schedulers=False, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, extra_metric_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_forward_pass_metrics=False, forward_pass_metrics_worker_id='', forward_pass_metrics_ipc_name=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, stat_loggers=None, api_key=None, admin_api_key=None, served_model_name='deepseek-ai/DeepSeek-V4-Pro', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, strip_thinking_cache=False, enable_strict_thinking=False, tool_call_parser=None, tool_server=None, sampling_defaults='model', asr_max_buffer_seconds=60, asr_max_concurrent_sessions=32, dp_size=1, load_balance_method='follow_bootstrap_room', attn_cp_size=1, moe_dp_size=1, dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, experts_shared_outer_loras=None, lora_use_virtual_experts=False, lora_strict_loading=False, lora_drain_wait_threshold=0.0, attention_backend='dsv4', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='flashinfer', grammar_backend='xgrammar', radix_cache_backend=None, mm_attention_backend=None, fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='auto', dsa_prefill_backend=None, dsa_decode_backend=None, dsa_topk_backend='sgl-kernel', disable_flashinfer_autotune=True, mamba_backend='triton', speculative_algorithm=None, speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_dflash_block_size=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_draft_window_size=None, speculative_moe_runner_backend='flashinfer_mxfp4', speculative_moe_a2a_backend=None, speculative_draft_model_quantization=None, speculative_skip_dp_mlp_sync=False, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_max_trie_depth=18, speculative_ngram_capacity=10000000, speculative_ngram_external_corpus_path=None, speculative_ngram_external_sam_budget=0, speculative_ngram_external_corpus_max_tokens=10000000, enable_multi_layer_eagle=False, speculative_adaptive=False, speculative_adaptive_config=None, ep_size=1, moe_a2a_backend='none', moe_runner_backend='flashinfer_mxfp4', flashinfer_mxfp4_moe_precision='default', enable_flashinfer_allreduce_fusion=False, enforce_disable_flashinfer_allreduce_fusion=False, enable_aiter_allreduce_fusion=False, deepep_mode='auto', deepep_dispatcher_output_dtype='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, enable_elastic_expert_backup=False, mooncake_ib_device=None, enable_deepep_waterfill=False, elastic_ep_rejoin=False, max_mamba_cache_size=None, mamba_ssm_dtype=None, mamba_full_memory_ratio=0.9, mamba_scheduler_strategy='no_buffer', mamba_track_interval=256, linear_attn_backend='triton', linear_attn_decode_backend=None, linear_attn_prefill_backend=None, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='layer_first', hicache_storage_backend=None, hicache_storage_prefetch_policy='timeout', hicache_storage_backend_extra_config=None, enable_hisparse=False, hisparse_config=None, enable_lmcache=False, lmcache_config_file=None, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', enable_mis=False, disable_radix_cache=True, cuda_graph_max_bs=512, cuda_graph_bs=[1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], disable_cuda_graph=True, disable_cuda_graph_padding=False, enable_breakable_cuda_graph=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, debug_cuda_graph=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, enable_mscclpp=False, enable_torch_symm_mem=False, pre_warm_nccl=False, disable_overlap_schedule=False, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_attention_local_control_broadcast=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, enable_torch_compile=False, disable_piecewise_cuda_graph=True, enforce_piecewise_cuda_graph=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, piecewise_cuda_graph_max_tokens=32768, piecewise_cuda_graph_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192, 8704, 9216, 9728, 10240, 10752, 11264, 11776, 12288, 12800, 13312, 13824, 14336, 14848, 15360, 15872, 16384, 16896, 17408, 17920, 18432, 18944, 19456, 19968, 20480, 20992, 21504, 22016, 22528, 23040, 23552, 24064, 24576, 25088, 25600, 26112, 26624, 27136, 27648, 28160, 28672, 29184, 29696, 30208, 30720, 31232, 31744, 32256, 32768], piecewise_cuda_graph_compiler='eager', torchao_config='', enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, triton_attention_split_tile_size=None, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, enforce_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, keep_mm_feature_on_device=False, enable_return_hidden_states=False, enable_return_routed_experts=False, enable_return_indexer_topk=False, scheduler_recv_interval=1, numa_node=None, enable_deterministic_inference=False, rl_on_policy_target=None, enable_attn_tp_input_scattered=False, disable_attn_tp_gather=False, gc_threshold=None, kv_canary='none', kv_canary_real_data='none', kv_canary_sweep_interval=0, enable_dsa_prefill_context_parallel=False, dsa_prefill_cp_mode='round-robin-split', enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_fused_moe_sum_all_reduce=False, enable_prefill_context_parallel=False, prefill_cp_mode='in-seq-split', enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='prefill', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=7200, disaggregation_ib_device=None, disaggregation_decode_enable_radix_cache=False, disaggregation_decode_enable_offload_kvcache=False, num_reserved_decode_tokens=512, disaggregation_decode_polling_interval=1, encoder_only=False, language_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], enable_adaptive_dispatch_to_encoder=False, custom_weight_loader=[], weight_loader_disable_mmap=False, weight_loader_prefetch_checkpoints=False, weight_loader_prefetch_num_threads=4, weight_loader_drop_cache_after_load=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, engine_info_bootstrap_port=6789, modelexpress_config=None, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, limit_mm_data_per_request=None, enable_mm_global_cache=False, decrypted_config_file=None, decrypted_draft_config_file=None, forward_hooks=None, enable_quant_communications=False, msprobe_dump_config=None)
+[2026-06-08 00:49:32] server_args=ServerArgs(model_path='/model', tokenizer_path='/model', tokenizer_mode='auto', tokenizer_backend='huggingface', tokenizer_worker_num=1, detokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=True, context_length=None, is_embedding=False, prefill_only_disable_kv_cache=False, enable_multimodal=None, revision=None, model_impl='auto', model_config_parser='auto', host='0.0.0.0', port=6100, fastapi_root_path='', grpc_mode=False, skip_server_warmup=False, warmups=None, nccl_port=None, checkpoint_engine_wait_weights_before_ready=False, ssl_keyfile=None, ssl_certfile=None, ssl_ca_certs=None, ssl_keyfile_password=None, enable_ssl_refresh=False, enable_http2=False, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='fp8_e4m3', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, mem_fraction_static=0.9, max_running_requests=512, max_queued_requests=None, max_total_tokens=None, chunked_prefill_size=32768, enable_dynamic_chunking=False, max_prefill_tokens=16384, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, disable_priority_preemption=False, default_priority_value=None, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, schedule_conservativeness=1.0, page_size=256, swa_full_tokens_ratio=0.1, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, prefill_delayer_queue_min_ratio=None, prefill_delayer_max_delay_ms=None, device='cuda', tp_size=4, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, stream_interval=1, batch_notify_size=16, stream_response_default_include_usage=False, incremental_streaming_output=True, enable_streaming_session=False, random_seed=624950466, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, watchdog_timeout=300, soft_watchdog_timeout=None, dist_timeout=None, download_dir=None, model_checksum=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, load_snapshot_publish_interval=15, use_ray=False, custom_sigquit_handler=None, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=False, grpc_http_sidecar_port=None, enable_mfu_metrics=False, enable_metrics_for_all_schedulers=False, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, extra_metric_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_forward_pass_metrics=False, forward_pass_metrics_worker_id='', forward_pass_metrics_ipc_name=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, stat_loggers=None, api_key=None, admin_api_key=None, served_model_name='deepseek-ai/DeepSeek-V4-Pro', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, strip_thinking_cache=False, enable_strict_thinking=False, tool_call_parser=None, tool_server=None, sampling_defaults='model', asr_max_buffer_seconds=60, asr_max_concurrent_sessions=32, dp_size=1, load_balance_method='follow_bootstrap_room', attn_cp_size=1, moe_dp_size=1, dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, experts_shared_outer_loras=None, lora_use_virtual_experts=False, lora_strict_loading=False, lora_drain_wait_threshold=0.0, attention_backend='dsv4', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='flashinfer', grammar_backend='xgrammar', radix_cache_backend=None, mm_attention_backend=None, fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='auto', dsa_prefill_backend=None, dsa_decode_backend=None, dsa_topk_backend='sgl-kernel', disable_flashinfer_autotune=True, mamba_backend='triton', speculative_algorithm=None, speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_dflash_block_size=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_draft_window_size=None, speculative_moe_runner_backend='flashinfer_mxfp4', speculative_moe_a2a_backend=None, speculative_draft_model_quantization=None, speculative_skip_dp_mlp_sync=False, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_max_trie_depth=18, speculative_ngram_capacity=10000000, speculative_ngram_external_corpus_path=None, speculative_ngram_external_sam_budget=0, speculative_ngram_external_corpus_max_tokens=10000000, enable_multi_layer_eagle=False, speculative_adaptive=False, speculative_adaptive_config=None, ep_size=1, moe_a2a_backend='none', moe_runner_backend='flashinfer_mxfp4', flashinfer_mxfp4_moe_precision='default', enable_flashinfer_allreduce_fusion=False, enforce_disable_flashinfer_allreduce_fusion=False, enable_aiter_allreduce_fusion=False, deepep_mode='auto', deepep_dispatcher_output_dtype='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, enable_elastic_expert_backup=False, mooncake_ib_device=None, enable_deepep_waterfill=False, elastic_ep_rejoin=False, max_mamba_cache_size=None, mamba_ssm_dtype=None, mamba_full_memory_ratio=0.9, mamba_scheduler_strategy='no_buffer', mamba_track_interval=256, linear_attn_backend='triton', linear_attn_decode_backend=None, linear_attn_prefill_backend=None, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='layer_first', hicache_storage_backend=None, hicache_storage_prefetch_policy='timeout', hicache_storage_backend_extra_config=None, enable_hisparse=False, hisparse_config=None, enable_lmcache=False, lmcache_config_file=None, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', enable_mis=False, disable_radix_cache=True, cuda_graph_max_bs=512, cuda_graph_bs=[1, 2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], disable_cuda_graph=True, disable_cuda_graph_padding=False, enable_breakable_cuda_graph=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, debug_cuda_graph=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, enable_mscclpp=False, enable_torch_symm_mem=False, pre_warm_nccl=False, disable_overlap_schedule=False, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_attention_local_control_broadcast=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, enable_torch_compile=False, disable_piecewise_cuda_graph=True, enforce_piecewise_cuda_graph=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, piecewise_cuda_graph_max_tokens=32768, piecewise_cuda_graph_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048, 2304, 2560, 2816, 3072, 3328, 3584, 3840, 4096, 4608, 5120, 5632, 6144, 6656, 7168, 7680, 8192, 8704, 9216, 9728, 10240, 10752, 11264, 11776, 12288, 12800, 13312, 13824, 14336, 14848, 15360, 15872, 16384, 16896, 17408, 17920, 18432, 18944, 19456, 19968, 20480, 20992, 21504, 22016, 22528, 23040, 23552, 24064, 24576, 25088, 25600, 26112, 26624, 27136, 27648, 28160, 28672, 29184, 29696, 30208, 30720, 31232, 31744, 32256, 32768], piecewise_cuda_graph_compiler='eager', torchao_config='', enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, triton_attention_split_tile_size=None, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, enforce_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, keep_mm_feature_on_device=False, enable_return_hidden_states=False, enable_return_routed_experts=False, enable_return_indexer_topk=False, scheduler_recv_interval=1, numa_node=None, enable_deterministic_inference=False, rl_on_policy_target=None, enable_attn_tp_input_scattered=False, disable_attn_tp_gather=False, gc_threshold=None, kv_canary='none', kv_canary_real_data='none', kv_canary_sweep_interval=0, enable_dsa_prefill_context_parallel=False, dsa_prefill_cp_mode='round-robin-split', enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_fused_moe_sum_all_reduce=False, enable_prefill_context_parallel=False, prefill_cp_mode='in-seq-split', enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='prefill', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=7200, disaggregation_ib_device=None, disaggregation_decode_enable_radix_cache=False, disaggregation_decode_enable_offload_kvcache=False, num_reserved_decode_tokens=512, disaggregation_decode_polling_interval=1, encoder_only=False, language_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], enable_adaptive_dispatch_to_encoder=False, custom_weight_loader=[], weight_loader_disable_mmap=False, weight_loader_prefetch_checkpoints=False, weight_loader_prefetch_num_threads=4, weight_loader_drop_cache_after_load=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, engine_info_bootstrap_port=6789, modelexpress_config=None, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, limit_mm_data_per_request=None, enable_mm_global_cache=False, decrypted_config_file=None, decrypted_draft_config_file=None, forward_hooks=None, enable_quant_communications=False, msprobe_dump_config=None)
+[2026-06-08 00:49:33] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:33] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:49:34] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:49:35] CommonKVBootstrapServer started successfully on 0.0.0.0:7200
+[2026-06-08 00:49:35] No HuggingFace chat template found
+[2026-06-08 00:49:35] No chat template found, defaulting to 'string' content format
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:49:41 TP2] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:41 TP2] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:49:41 TP3] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:41 TP3] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:49:41 TP1] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:41 TP0] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:41 TP1] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[2026-06-08 00:49:41 TP0] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:49:42] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:49:43 TP1] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:49:43 TP0] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:49:43 TP2] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:49:43 TP3] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:49:43 TP1] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:43 TP1] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[2026-06-08 00:49:43 TP0] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:43 TP0] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[2026-06-08 00:49:43 TP2] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:43 TP2] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[2026-06-08 00:49:43 TP3] Auto-detected DSV4 routed-expert layout: is_fp4_experts=True
+[2026-06-08 00:49:43 TP3] Hybrid swa model: self.hf_config.architectures=['DeepseekV4ForCausalLM']
+[2026-06-08 00:49:43 TP1] Init torch distributed begin.
+[2026-06-08 00:49:43 TP3] Init torch distributed begin.
+[2026-06-08 00:49:43 TP0] Init torch distributed begin.
+[2026-06-08 00:49:43 TP2] Init torch distributed begin.
+[2026-06-08 00:49:45 TP0] sglang is using nccl==2.28.9
+[2026-06-08 00:50:11 TP0] Custom allreduce v2 initialized successfully (rank-check failed: tensor model parallel group is not initialized)
+[2026-06-08 00:50:11 TP0] Init torch distributed ends. elapsed=28.03 s, mem usage=1.11 GB
+[2026-06-08 00:50:11 TP3] Init torch distributed ends. elapsed=28.03 s, mem usage=1.11 GB
+[2026-06-08 00:50:11 TP2] Init torch distributed ends. elapsed=28.03 s, mem usage=1.11 GB
+[2026-06-08 00:50:11 TP1] Init torch distributed ends. elapsed=28.04 s, mem usage=1.11 GB
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20260608 00:50:11.878321 3373169 transfer_engine_py.cpp:96] Using default malloc/free for protocol: rdma
+W20260608 00:50:11.878321 3373168 transfer_engine_py.cpp:96] Using default malloc/free for protocol: rdma
+I20260608 00:50:11.878425 3373169 transfer_engine_impl.cpp:811] Metrics reporting is disabled (set MC_TE_METRIC=1 to enable)
+I20260608 00:50:11.878428 3373168 transfer_engine_impl.cpp:811] Metrics reporting is disabled (set MC_TE_METRIC=1 to enable)
+I20260608 00:50:11.878440 3373169 transfer_engine_impl.cpp:115] Transfer Engine parseHostNameWithPort. server_name: 10.0.18.231 port: 12001
+I20260608 00:50:11.878445 3373168 transfer_engine_impl.cpp:115] Transfer Engine parseHostNameWithPort. server_name: 10.0.18.231 port: 12001
+I20260608 00:50:11.878482 3373169 transfer_engine_impl.cpp:182] Transfer Engine RPC using P2P handshake, listening on 10.0.18.231:16668
+I20260608 00:50:11.878482 3373168 transfer_engine_impl.cpp:182] Transfer Engine RPC using P2P handshake, listening on 10.0.18.231:15502
+I20260608 00:50:11.878593 3373168 transfer_engine_impl.cpp:237] Auto-discovering topology...
+I20260608 00:50:11.878600 3373169 transfer_engine_impl.cpp:237] Auto-discovering topology...
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20260608 00:50:11.878769 3373166 transfer_engine_py.cpp:96] Using default malloc/free for protocol: rdma
+W20260608 00:50:11.878775 3373167 transfer_engine_py.cpp:96] Using default malloc/free for protocol: rdma
+I20260608 00:50:11.878868 3373166 transfer_engine_impl.cpp:811] Metrics reporting is disabled (set MC_TE_METRIC=1 to enable)
+I20260608 00:50:11.878870 3373167 transfer_engine_impl.cpp:811] Metrics reporting is disabled (set MC_TE_METRIC=1 to enable)
+I20260608 00:50:11.878890 3373166 transfer_engine_impl.cpp:115] Transfer Engine parseHostNameWithPort. server_name: 10.0.18.231 port: 12001
+I20260608 00:50:11.878890 3373167 transfer_engine_impl.cpp:115] Transfer Engine parseHostNameWithPort. server_name: 10.0.18.231 port: 12001
+I20260608 00:50:11.878940 3373166 transfer_engine_impl.cpp:182] Transfer Engine RPC using P2P handshake, listening on 10.0.18.231:16898
+I20260608 00:50:11.878942 3373167 transfer_engine_impl.cpp:182] Transfer Engine RPC using P2P handshake, listening on 10.0.18.231:16981
+I20260608 00:50:11.879067 3373166 transfer_engine_impl.cpp:237] Auto-discovering topology...
+I20260608 00:50:11.879068 3373167 transfer_engine_impl.cpp:237] Auto-discovering topology...
+W20260608 00:50:11.884276 3373169 topology.cpp:156] No RDMA devices found, check your device installation
+W20260608 00:50:11.884276 3373168 topology.cpp:156] No RDMA devices found, check your device installation
+I20260608 00:50:11.884384 3373168 transfer_engine_impl.cpp:252] Topology discovery complete. Found 0 HCAs.
+I20260608 00:50:11.884384 3373169 transfer_engine_impl.cpp:252] Topology discovery complete. Found 0 HCAs.
+I20260608 00:50:11.884406 3373169 transfer_engine_impl.cpp:301] Using cross-node NVLink transport (MC_FORCE_MNNVL or no HCA detected)
+I20260608 00:50:11.884406 3373168 transfer_engine_impl.cpp:301] Using cross-node NVLink transport (MC_FORCE_MNNVL or no HCA detected)
+W20260608 00:50:11.884675 3373166 topology.cpp:156] No RDMA devices found, check your device installation
+W20260608 00:50:11.884675 3373167 topology.cpp:156] No RDMA devices found, check your device installation
+I20260608 00:50:11.884840 3373166 transfer_engine_impl.cpp:252] Topology discovery complete. Found 0 HCAs.
+I20260608 00:50:11.884840 3373167 transfer_engine_impl.cpp:252] Topology discovery complete. Found 0 HCAs.
+I20260608 00:50:11.884868 3373166 transfer_engine_impl.cpp:301] Using cross-node NVLink transport (MC_FORCE_MNNVL or no HCA detected)
+I20260608 00:50:11.884868 3373167 transfer_engine_impl.cpp:301] Using cross-node NVLink transport (MC_FORCE_MNNVL or no HCA detected)
+[2026-06-08 00:50:18 TP1] Load weight begin. avail mem=274.74 GB
+[2026-06-08 00:50:18 TP3] Load weight begin. avail mem=274.74 GB
+[2026-06-08 00:50:18 TP2] Load weight begin. avail mem=274.74 GB
+[2026-06-08 00:50:18 TP0] Load weight begin. avail mem=274.74 GB
+[2026-06-08 00:50:18 TP0] Detected fp8 checkpoint.
+[2026-06-08 00:50:18 TP0] DeepSeek V4 requires different clamping for shared and routed experts. Shared experts fusion optimization is disabled.
+Multi-thread loading shards:   0% Completed | 0/64 [00:00<?, ?it/s]Multi-thread loading shards:   3% Completed | 2/64 [00:10<05:14,  5.07s/it]Multi-thread loading shards:   5% Completed | 3/64 [00:11<03:31,  3.46s/it]Multi-thread loading shards:   6% Completed | 4/64 [00:13<02:51,  2.86s/it]Multi-thread loading shards:   8% Completed | 5/64 [00:14<02:21,  2.40s/it]Multi-thread loading shards:   9% Completed | 6/64 [00:16<01:59,  2.05s/it]Multi-thread loading shards:  11% Completed | 7/64 [00:17<01:48,  1.91s/it]Multi-thread loading shards:  12% Completed | 8/64 [00:19<01:37,  1.74s/it]Multi-thread loading shards:  14% Completed | 9/64 [00:21<01:39,  1.81s/it]Multi-thread loading shards:  16% Completed | 10/64 [00:22<01:33,  1.74s/it]Multi-thread loading shards:  17% Completed | 11/64 [00:24<01:31,  1.74s/it]Multi-thread loading shards:  19% Completed | 12/64 [00:25<01:28,  1.71s/it]Multi-thread loading shards:  20% Completed | 13/64 [00:27<01:26,  1.71s/it]Multi-thread loading shards:  22% Completed | 14/64 [00:29<01:26,  1.74s/it]Multi-thread loading shards:  23% Completed | 15/64 [00:30<01:20,  1.65s/it]Multi-thread loading shards:  25% Completed | 16/64 [00:32<01:15,  1.58s/it]Multi-thread loading shards:  27% Completed | 17/64 [00:33<01:12,  1.53s/it]Multi-thread loading shards:  28% Completed | 18/64 [00:35<01:09,  1.52s/it]Multi-thread loading shards:  30% Completed | 19/64 [00:36<01:10,  1.56s/it]Multi-thread loading shards:  31% Completed | 20/64 [00:38<01:10,  1.61s/it]Multi-thread loading shards:  33% Completed | 21/64 [00:40<01:06,  1.54s/it]Multi-thread loading shards:  34% Completed | 22/64 [00:41<01:01,  1.46s/it]Multi-thread loading shards:  36% Completed | 23/64 [00:42<01:01,  1.50s/it]Multi-thread loading shards:  38% Completed | 24/64 [00:44<01:00,  1.51s/it]Multi-thread loading shards:  39% Completed | 25/64 [00:45<00:58,  1.49s/it]Multi-thread loading shards:  41% Completed | 26/64 [00:48<01:05,  1.73s/it]Multi-thread loading shards:  42% Completed | 27/64 [00:49<00:57,  1.56s/it]Multi-thread loading shards:  44% Completed | 28/64 [00:50<00:55,  1.54s/it]Multi-thread loading shards:  45% Completed | 29/64 [00:52<00:52,  1.51s/it]Multi-thread loading shards:  47% Completed | 30/64 [00:54<00:56,  1.65s/it]Multi-thread loading shards:  48% Completed | 31/64 [00:55<00:54,  1.64s/it]Multi-thread loading shards:  50% Completed | 32/64 [00:57<00:49,  1.55s/it]Multi-thread loading shards:  52% Completed | 33/64 [00:58<00:44,  1.43s/it]Multi-thread loading shards:  53% Completed | 34/64 [00:59<00:40,  1.36s/it]Multi-thread loading shards:  55% Completed | 35/64 [01:00<00:40,  1.38s/it]Multi-thread loading shards:  56% Completed | 36/64 [01:02<00:41,  1.48s/it]Multi-thread loading shards:  58% Completed | 37/64 [01:05<00:47,  1.76s/it]Multi-thread loading shards:  59% Completed | 38/64 [01:06<00:46,  1.77s/it]Multi-thread loading shards:  61% Completed | 39/64 [01:08<00:43,  1.72s/it]Multi-thread loading shards:  62% Completed | 40/64 [01:10<00:39,  1.67s/it]Multi-thread loading shards:  64% Completed | 41/64 [01:11<00:34,  1.50s/it]Multi-thread loading shards:  66% Completed | 42/64 [01:12<00:31,  1.45s/it]Multi-thread loading shards:  67% Completed | 43/64 [01:13<00:28,  1.35s/it]Multi-thread loading shards:  69% Completed | 44/64 [01:15<00:28,  1.43s/it]Multi-thread loading shards:  70% Completed | 45/64 [01:16<00:29,  1.53s/it]Multi-thread loading shards:  72% Completed | 46/64 [01:17<00:20,  1.12s/it]Multi-thread loading shards:  73% Completed | 47/64 [01:17<00:13,  1.22it/s]Multi-thread loading shards:  75% Completed | 48/64 [01:17<00:09,  1.65it/s]Multi-thread loading shards:  77% Completed | 49/64 [01:17<00:06,  2.18it/s]Multi-thread loading shards:  78% Completed | 50/64 [01:18<00:07,  1.94it/s]Multi-thread loading shards:  80% Completed | 51/64 [01:18<00:05,  2.51it/s]Multi-thread loading shards:  81% Completed | 52/64 [01:18<00:03,  3.16it/s]Multi-thread loading shards:  83% Completed | 53/64 [01:20<00:10,  1.07it/s]Multi-thread loading shards:  84% Completed | 54/64 [01:25<00:20,  2.07s/it]Multi-thread loading shards:  86% Completed | 55/64 [01:29<00:24,  2.70s/it]Multi-thread loading shards:  88% Completed | 56/64 [01:31<00:18,  2.29s/it]Multi-thread loading shards:  89% Completed | 57/64 [01:31<00:11,  1.65s/it]Multi-thread loading shards:  91% Completed | 58/64 [01:31<00:07,  1.19s/it]Multi-thread loading shards:  92% Completed | 59/64 [01:31<00:04,  1.16it/s]Multi-thread loading shards:  94% Completed | 60/64 [01:31<00:02,  1.57it/s]Multi-thread loading shards:  97% Completed | 62/64 [01:31<00:00,  2.57it/s]Multi-thread loading shards: 100% Completed | 64/64 [01:31<00:00,  3.81it/s]Multi-thread loading shards: 100% Completed | 64/64 [01:31<00:00,  1.43s/it]
+[2026-06-08 00:52:10 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.0.mlp.experts)...
+[2026-06-08 00:52:12 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.1.mlp.experts)...
+[2026-06-08 00:52:12 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.2.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.3.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.4.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.5.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.6.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.7.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.8.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.9.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.10.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.11.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.12.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.13.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.14.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.15.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.16.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.17.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.18.mlp.experts)...
+[2026-06-08 00:52:13 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.19.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.20.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.21.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.22.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.23.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.24.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.25.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.26.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.27.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.28.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.29.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.30.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.31.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.32.mlp.experts)...
+[2026-06-08 00:52:14 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.33.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.34.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.35.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.36.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.37.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.38.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.39.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.40.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.41.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.42.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.43.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.44.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.45.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.46.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.47.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.48.mlp.experts)...
+[2026-06-08 00:52:15 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.49.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.50.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.51.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.52.mlp.experts)...
+[2026-06-08 00:52:16 TP3] Using FP8 KV cache but no scaling factors provided. Defaulting to scaling factors of 1.0. This may lead to less accurate results!
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.53.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.54.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.55.mlp.experts)...
+[2026-06-08 00:52:16 TP3] Load weight end. elapsed=117.83 s, type=DeepseekV4ForCausalLM, quant=fp8, fmt=e4m3, avail mem=70.47 GB, mem usage=204.27 GB.
+[2026-06-08 00:52:16 TP1] Using FP8 KV cache but no scaling factors provided. Defaulting to scaling factors of 1.0. This may lead to less accurate results!
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.56.mlp.experts)...
+[2026-06-08 00:52:16 TP1] Load weight end. elapsed=117.95 s, type=DeepseekV4ForCausalLM, quant=fp8, fmt=e4m3, avail mem=70.47 GB, mem usage=204.27 GB.
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.57.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.58.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.59.mlp.experts)...
+[2026-06-08 00:52:16 TP0] Shuffling FP4 expert weights for TRT-LLM MxFP4 kernel (layer: model.layers.60.mlp.experts)...
+[2026-06-08 00:52:16 TP2] Using FP8 KV cache but no scaling factors provided. Defaulting to scaling factors of 1.0. This may lead to less accurate results!
+[2026-06-08 00:52:16 TP0] Using FP8 KV cache but no scaling factors provided. Defaulting to scaling factors of 1.0. This may lead to less accurate results!
+[2026-06-08 00:52:16 TP2] Load weight end. elapsed=118.21 s, type=DeepseekV4ForCausalLM, quant=fp8, fmt=e4m3, avail mem=70.47 GB, mem usage=204.27 GB.
+[2026-06-08 00:52:16 TP0] Load weight end. elapsed=118.19 s, type=DeepseekV4ForCausalLM, quant=fp8, fmt=e4m3, avail mem=70.47 GB, mem usage=204.27 GB.
+[2026-06-08 00:52:16 TP0] DSV4 memory calculation: bytes_per_full_token=23691.44, available_bytes=43.24 GB, full_token=1959424
+[2026-06-08 00:52:16 TP0] DSV4 pool sizes: full=1959424, swa=195840, c4=489856, c128=15308, c4_state=12240, c128_state=195840
+[2026-06-08 00:52:16 TP0] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=512.
+[2026-06-08 00:52:16 TP3] DSV4 memory calculation: bytes_per_full_token=23691.44, available_bytes=43.24 GB, full_token=1959424
+[2026-06-08 00:52:16 TP2] DSV4 memory calculation: bytes_per_full_token=23691.44, available_bytes=43.24 GB, full_token=1959424
+[2026-06-08 00:52:16 TP3] DSV4 pool sizes: full=1959424, swa=195840, c4=489856, c128=15308, c4_state=12240, c128_state=195840
+[2026-06-08 00:52:16 TP1] DSV4 memory calculation: bytes_per_full_token=23691.44, available_bytes=43.24 GB, full_token=1959424
+[2026-06-08 00:52:16 TP2] DSV4 pool sizes: full=1959424, swa=195840, c4=489856, c128=15308, c4_state=12240, c128_state=195840
+[2026-06-08 00:52:16 TP1] DSV4 pool sizes: full=1959424, swa=195840, c4=489856, c128=15308, c4_state=12240, c128_state=195840
+[2026-06-08 00:52:16 TP3] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=512.
+[2026-06-08 00:52:16 TP2] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=512.
+[2026-06-08 00:52:16 TP1] Max concurrent requests (per dp worker) from the finalized token capacity: max_num_reqs=512.
+[2026-06-08 00:52:16 TP0] Initialize DeepSeekV4TokenToKVPool with max_num_reqs=512 swa_size=195840 c4_size=489856 c4_logical_size=489856 c128_size=15308 c4_state_pool_size=12240 c128_state_pool_size=195840
+[2026-06-08 00:52:16 TP1] Initialize DeepSeekV4TokenToKVPool with max_num_reqs=512 swa_size=195840 c4_size=489856 c4_logical_size=489856 c128_size=15308 c4_state_pool_size=12240 c128_state_pool_size=195840
+[2026-06-08 00:52:16 TP2] Initialize DeepSeekV4TokenToKVPool with max_num_reqs=512 swa_size=195840 c4_size=489856 c4_logical_size=489856 c128_size=15308 c4_state_pool_size=12240 c128_state_pool_size=195840
+[2026-06-08 00:52:16 TP3] Initialize DeepSeekV4TokenToKVPool with max_num_reqs=512 swa_size=195840 c4_size=489856 c4_logical_size=489856 c128_size=15308 c4_state_pool_size=12240 c128_state_pool_size=195840
+[2026-06-08 00:52:17 TP1] Memory pool end. avail mem=25.19 GB
+[2026-06-08 00:52:17 TP3] Memory pool end. avail mem=25.19 GB
+[2026-06-08 00:52:17 TP2] Memory pool end. avail mem=25.19 GB
+[2026-06-08 00:52:17 TP0] Memory pool end. avail mem=25.19 GB
+[2026-06-08 00:52:25 TP3] Using DeepseekV4AttnBackend for dsv4 attention backend (CUDA).
+[2026-06-08 00:52:25 TP3] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[2026-06-08 00:52:25 TP1] Using DeepseekV4AttnBackend for dsv4 attention backend (CUDA).
+[2026-06-08 00:52:25 TP1] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:52:25 TP0] Using DeepseekV4AttnBackend for dsv4 attention backend (CUDA).
+[2026-06-08 00:52:25 TP0] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:52:25 TP2] Using DeepseekV4AttnBackend for dsv4 attention backend (CUDA).
+[2026-06-08 00:52:25 TP2] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[transformers] Unrecognized keys in `rope_parameters` for 'rope_type'='default': {'attention_factor'}
+[2026-06-08 00:52:27 TP1] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:52:27 TP0] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:52:27 TP3] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:52:27 TP2] Tokenizer for /model is still TokenizersBackend after retries with --trust-remote-code. Model-specific tokenizer attributes may be missing.
+[2026-06-08 00:52:28 TP0] max_total_num_tokens=1959424, chunked_prefill_size=32768, max_prefill_tokens=16384, max_running_requests=512, context_len=1048576, available_gpu_mem=25.12 GB
+[2026-06-08 00:52:28 TP3] Tree cache initialized: source=default impl=SWAChunkCache hybrid_swa=True hybrid_ssm=False hierarchical=False streaming_wrapped=False
+[2026-06-08 00:52:28 TP2] Tree cache initialized: source=default impl=SWAChunkCache hybrid_swa=True hybrid_ssm=False hierarchical=False streaming_wrapped=False
+[2026-06-08 00:52:28 TP0] Tree cache initialized: source=default impl=SWAChunkCache hybrid_swa=True hybrid_ssm=False hierarchical=False streaming_wrapped=False
+[2026-06-08 00:52:28 TP1] Tree cache initialized: source=default impl=SWAChunkCache hybrid_swa=True hybrid_ssm=False hierarchical=False streaming_wrapped=False
+W20260608 00:52:28.095682 3373168 nvlink_transport.cpp:347] Memory region 0x50e100c0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095743 3373168 nvlink_transport.cpp:347] Memory region 0x50e100d0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095754 3373168 nvlink_transport.cpp:347] Memory region 0x50e100e0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095763 3373168 nvlink_transport.cpp:347] Memory region 0x50e100f0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095770 3373168 nvlink_transport.cpp:347] Memory region 0x50e10140000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095777 3373168 nvlink_transport.cpp:347] Memory region 0x50e10240000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095784 3373168 nvlink_transport.cpp:347] Memory region 0x50e10100000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095790 3373168 nvlink_transport.cpp:347] Memory region 0x50e11fd0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095796 3373168 nvlink_transport.cpp:347] Memory region 0x50e10110000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095803 3373168 nvlink_transport.cpp:347] Memory region 0x50e10120000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.095943 3373167 nvlink_transport.cpp:347] Memory region 0x426921c0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096002 3373167 nvlink_transport.cpp:347] Memory region 0x426921d0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096016 3373167 nvlink_transport.cpp:347] Memory region 0x426921e0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096025 3373167 nvlink_transport.cpp:347] Memory region 0x426921f0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096033 3373167 nvlink_transport.cpp:347] Memory region 0x42692240000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096042 3373167 nvlink_transport.cpp:347] Memory region 0x42692340000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096072 3373167 nvlink_transport.cpp:347] Memory region 0x42692200000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096082 3373167 nvlink_transport.cpp:347] Memory region 0x42692440000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096091 3373167 nvlink_transport.cpp:347] Memory region 0x42692210000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096098 3373167 nvlink_transport.cpp:347] Memory region 0x42692220000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096176 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa41c0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096220 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa41d0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096235 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa41e0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096244 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa41f0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096253 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa4240000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096263 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa4340000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096271 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa4200000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096280 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa4440000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096288 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa4210000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096297 3373166 nvlink_transport.cpp:347] Memory region 0x3cfa4220000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096421 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f10000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096465 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f20000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096477 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f30000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096486 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f40000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096494 3373169 nvlink_transport.cpp:347] Memory region 0x55a460c0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096501 3373169 nvlink_transport.cpp:347] Memory region 0x55a461c0000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096508 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f50000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096515 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f90000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096521 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f60000 is not allocated by cuMemCreate, but it can be used as local buffer
+W20260608 00:52:28.096527 3373169 nvlink_transport.cpp:347] Memory region 0x55ab5f70000 is not allocated by cuMemCreate, but it can be used as local buffer
+[2m2026-06-08T00:52:28.448431Z[0m [32m INFO[0m [2mdynamo_runtime::distributed[0m[2m:[0m Added NATS service dynamo_prefill
+[2026-06-08 00:52:28] Sending dummy metrics to initialize
+[2m2026-06-08T00:52:28.482951Z[0m [32m INFO[0m [2mdynamo_runtime::discovery::kv_store[0m[2m:[0m KVStoreDiscovery::register: EventChannel bucket=v1/event_channels, key=dynamo//kv_metrics/694d9ea4b3fd3c0a
+[2026-06-08 00:52:28] SGLang metrics loop started
+[2026-06-08 00:52:28] Start of prefill disaggregation warmup ...
+[2m2026-06-08T00:52:28.484941Z[0m [32m INFO[0m [2mdynamo_runtime::transports::event_plane[0m[2m:[0m EventPublisher registered with discovery [3mtopic[0m[2m=[0mkv_metrics [3mtransport[0m[2m=[0mNats [3minstance_id[0m[2m=[0m7587895377420696586
+[2026-06-08 00:52:58 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:52:58 TP0] Try DeepGEMM JIT Compiling for <TF32_HC_PRENORM_GEMM> N=24, K=28672, num_groups=112 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:52:58 TP0] Required memory for warmup: 2.0943603515625GB, Available memory: 25.1171875GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:   0%|          | 1/3584 [00:01<1:51:35,  1.87s/it]DeepGEMM warmup:  74%|███████▍  | 2658/3584 [00:01<00:00, 1887.50it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:02<00:00, 1362.18it/s]
+[2026-06-08 00:53:08 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:53:08 TP0] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=2048, K=7168, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:53:08 TP0] Required memory for warmup: 0.357421875GB, Available memory: 25.1171875GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:   0%|          | 1/3584 [00:01<1:44:34,  1.75s/it]DeepGEMM warmup:   4%|▍         | 145/3584 [00:03<01:16, 44.73it/s]DeepGEMM warmup:   7%|▋         | 257/3584 [00:05<01:04, 51.70it/s]DeepGEMM warmup:   8%|▊         | 289/3584 [00:07<01:25, 38.75it/s]DeepGEMM warmup:  12%|█▏        | 433/3584 [00:09<01:00, 52.35it/s]DeepGEMM warmup:  14%|█▍        | 513/3584 [00:11<01:01, 49.96it/s]DeepGEMM warmup:  16%|█▌        | 577/3584 [00:12<01:06, 45.54it/s]DeepGEMM warmup:  20%|██        | 721/3584 [00:14<00:50, 56.89it/s]DeepGEMM warmup:  21%|██▏       | 769/3584 [00:16<01:03, 44.64it/s]DeepGEMM warmup:  24%|██▍       | 865/3584 [00:18<00:57, 47.23it/s]DeepGEMM warmup:  28%|██▊       | 1009/3584 [00:20<00:45, 57.07it/s]DeepGEMM warmup:  29%|██▊       | 1025/3584 [00:22<01:01, 41.60it/s]DeepGEMM warmup:  30%|███       | 1089/3584 [00:24<01:02, 39.86it/s]DeepGEMM warmup:  32%|███▏      | 1161/3584 [00:26<01:04, 37.63it/s]DeepGEMM warmup:  34%|███▍      | 1233/3584 [00:28<01:01, 38.23it/s]DeepGEMM warmup:  36%|███▋      | 1305/3584 [00:29<00:59, 38.21it/s]DeepGEMM warmup:  38%|███▊      | 1377/3584 [00:31<00:57, 38.59it/s]DeepGEMM warmup:  40%|████      | 1449/3584 [00:33<00:55, 38.29it/s]DeepGEMM warmup:  42%|████▏     | 1521/3584 [00:35<00:53, 38.92it/s]DeepGEMM warmup:  54%|█████▍    | 1953/3584 [00:37<00:16, 97.56it/s]DeepGEMM warmup:  60%|██████    | 2161/3584 [00:39<00:13, 103.36it/s]DeepGEMM warmup:  83%|████████▎ | 2975/3584 [00:39<00:02, 287.89it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:39<00:00, 91.27it/s] 
+[2026-06-08 00:53:48 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:53:48 TP0] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=16384, K=1536, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:53:48 TP0] Required memory for warmup: 1.0703125GB, Available memory: 25.1171875GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:  22%|██▏       | 804/3584 [00:00<00:00, 8035.31it/s]DeepGEMM warmup:  47%|████▋     | 1667/3584 [00:00<00:00, 8380.37it/s]DeepGEMM warmup:  71%|███████   | 2545/3584 [00:00<00:00, 8558.74it/s]DeepGEMM warmup:  95%|█████████▍| 3401/3584 [00:00<00:00, 7289.27it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:00<00:00, 7094.63it/s]
+[2026-06-08 00:53:49 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:53:49 TP0] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=7168, K=4096, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:53:49 TP0] Required memory for warmup: 0.58984375GB, Available memory: 25.095703125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:  21%|██▏       | 769/3584 [00:00<00:00, 7688.03it/s]DeepGEMM warmup:  43%|████▎     | 1538/3584 [00:01<00:03, 679.71it/s]DeepGEMM warmup:  67%|██████▋   | 2406/3584 [00:02<00:00, 1232.79it/s]DeepGEMM warmup:  88%|████████▊ | 3161/3584 [00:02<00:00, 1800.31it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:02<00:00, 1572.11it/s]
+[2026-06-08 00:53:51 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:53:51 TP0] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=1536, K=7168, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:53:51 TP0] Required memory for warmup: 0.32275390625GB, Available memory: 25.095703125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:  19%|█▉        | 690/3584 [00:00<00:00, 6893.84it/s]DeepGEMM warmup:  40%|███▉      | 1428/3584 [00:00<00:00, 7176.77it/s]DeepGEMM warmup:  61%|██████    | 2192/3584 [00:00<00:00, 7387.86it/s]DeepGEMM warmup:  83%|████████▎ | 2970/3584 [00:00<00:00, 7540.90it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:00<00:00, 7504.49it/s]
+[2026-06-08 00:53:56 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:53:56 TP0] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=7168, K=768, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:53:56 TP0] Required memory for warmup: 0.466064453125GB, Available memory: 25.095703125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:  21%|██        | 755/3584 [00:00<00:00, 7548.48it/s]DeepGEMM warmup:  45%|████▍     | 1612/3584 [00:00<00:00, 8146.30it/s]DeepGEMM warmup:  68%|██████▊   | 2427/3584 [00:00<00:00, 7848.52it/s]DeepGEMM warmup:  90%|████████▉ | 3214/3584 [00:00<00:00, 7723.96it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:00<00:00, 7821.64it/s]
+[2026-06-08 00:54:07 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:54:07 TP0] Try DeepGEMM JIT Compiling for <GEMM_NT_F8F8BF16> N=8192, K=1536, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:54:07 TP0] Required memory for warmup: 0.55859375GB, Available memory: 25.095703125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:  23%|██▎       | 833/3584 [00:00<00:00, 8320.62it/s]DeepGEMM warmup:  46%|████▋     | 1666/3584 [00:00<00:00, 7797.95it/s]DeepGEMM warmup:  68%|██████▊   | 2448/3584 [00:00<00:00, 7659.65it/s]DeepGEMM warmup:  90%|████████▉ | 3215/3584 [00:00<00:00, 7628.27it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:00<00:00, 7700.01it/s]
+[2026-06-08 00:54:50 TP0] Prefill batch, #new-seq: 1, #new-token: 256, #cached-token: 0, full token usage: 0.00, swa token usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 1.80
+[2026-06-08 00:54:50] Prefill warmup completed
+[2026-06-08 00:54:50] Prefill worker handler initialized - bootstrap host: 10.0.18.231, bootstrap port: 7200
+[2026-06-08 00:54:50] Using model's BOS token ID for health check: 0
+[2026-06-08 00:54:50] Disagg health check configured: bootstrap_host=2.2.2.2, bootstrap_port=7200, bootstrap_room=0
+[2026-06-08 00:54:50] Using auto-detected local IP: 10.0.18.231 (IPv4)
+[2026-06-08 00:54:50] Publishing disaggregated endpoint to discovery: 10.0.18.231:7200
+[2026-06-08 00:54:50] Got total KV blocks from scheduler: 7654 (max_total_tokens=1959424, page_size=256)
+[2m2026-06-08T00:54:50.322874Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::manager[0m[2m:[0m Creating NATS request plane server
+[2m2026-06-08T00:54:50.323044Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m NatsMultiplexedServer::register_endpoint called [3mendpoint_name[0m[2m=[0munload_lora [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323119Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Successfully retrieved service group
+[2m2026-06-08T00:54:50.323097Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m NatsMultiplexedServer::register_endpoint called [3mendpoint_name[0m[2m=[0mlist_loras [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323148Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m NatsMultiplexedServer::register_endpoint called [3mendpoint_name[0m[2m=[0mgenerate [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323188Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Successfully retrieved service group
+[2m2026-06-08T00:54:50.323213Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Successfully retrieved service group
+[2m2026-06-08T00:54:50.323211Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Registering NATS endpoint [3mendpoint_name[0m[2m=[0munload_lora [3mendpoint_with_id[0m[2m=[0munload_lora-694d9ea4b3fd3c0a [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323234Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Registering NATS endpoint [3mendpoint_name[0m[2m=[0mlist_loras [3mendpoint_with_id[0m[2m=[0mlist_loras-694d9ea4b3fd3c0a [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323256Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Starting NATS push endpoint listener (blocking) [3mendpoint_name[0m[2m=[0mlist_loras [3mendpoint_with_id[0m[2m=[0mlist_loras-694d9ea4b3fd3c0a
+[2m2026-06-08T00:54:50.323259Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Registering NATS endpoint [3mendpoint_name[0m[2m=[0mgenerate [3mendpoint_with_id[0m[2m=[0mgenerate-694d9ea4b3fd3c0a [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323256Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Starting NATS push endpoint listener (blocking) [3mendpoint_name[0m[2m=[0munload_lora [3mendpoint_with_id[0m[2m=[0munload_lora-694d9ea4b3fd3c0a
+[2m2026-06-08T00:54:50.323282Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Starting NATS push endpoint listener (blocking) [3mendpoint_name[0m[2m=[0mgenerate [3mendpoint_with_id[0m[2m=[0mgenerate-694d9ea4b3fd3c0a
+[2m2026-06-08T00:54:50.323344Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m NatsMultiplexedServer::register_endpoint called [3mendpoint_name[0m[2m=[0mload_lora [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323402Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Successfully retrieved service group
+[2m2026-06-08T00:54:50.323455Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Registering NATS endpoint [3mendpoint_name[0m[2m=[0mload_lora [3mendpoint_with_id[0m[2m=[0mload_lora-694d9ea4b3fd3c0a [3mnamespace[0m[2m=[0mdynamo [3mcomponent[0m[2m=[0mprefill [3minstance_id[0m[2m=[0m7587895377420696586
+[2m2026-06-08T00:54:50.323483Z[0m [32m INFO[0m [2mdynamo_runtime::pipeline::network::ingress::nats_server[0m[2m:[0m Starting NATS push endpoint listener (blocking) [3mendpoint_name[0m[2m=[0mload_lora [3mendpoint_with_id[0m[2m=[0mload_lora-694d9ea4b3fd3c0a
+[2m2026-06-08T00:54:50.342772Z[0m [32m INFO[0m [2m_core[0m[2m:[0m Registered base model 'deepseek-ai/DeepSeek-V4-Pro' MDC
+[2026-06-08 00:54:50] Successfully registered LLM with runtime config
+[2026-06-08 00:54:50] Model registration succeeded; processing queued requests
+[2026-06-08 00:57:53 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:57:53 TP0] Try DeepGEMM JIT Compiling for <TF32_HC_PRENORM_GEMM> N=24, K=28672, num_groups=5 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:57:53 TP0] Required memory for warmup: 1.767822265625GB, Available memory: 24.39453125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:   0%|          | 1/3584 [00:01<1:56:18,  1.95s/it]DeepGEMM warmup:  84%|████████▍ | 3005/3584 [00:02<00:00, 2053.17it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:02<00:00, 1734.03it/s]
+[2026-06-08 00:58:04 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:58:04 TP0] Try DeepGEMM JIT Compiling for <TF32_HC_PRENORM_GEMM> N=24, K=28672, num_groups=1 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:58:04 TP0] Required memory for warmup: 1.755615234375GB, Available memory: 23.970703125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:   0%|          | 1/3584 [00:01<1:54:41,  1.92s/it]DeepGEMM warmup:  68%|██████▊   | 2428/3584 [00:02<00:00, 1680.68it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:02<00:00, 1702.65it/s]
+[2026-06-08 00:58:14 TP0] Prefill batch, #new-seq: 1, #new-token: 1792, #cached-token: 0, full token usage: 0.00, swa token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 8.76
+[2026-06-08 00:58:14 TP0] Prefill batch, #new-seq: 3, #new-token: 5376, #cached-token: 0, full token usage: 0.00, swa token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 4, cuda graph: False, input throughput (token/s): 725258.17
+[2026-06-08 00:58:24 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:58:24 TP0] Try DeepGEMM JIT Compiling for <TF32_HC_PRENORM_GEMM> N=24, K=28672, num_groups=4 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:58:24 TP0] Required memory for warmup: 1.7647705078125GB, Available memory: 21.86944580078125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:   0%|          | 1/3584 [00:01<1:55:01,  1.93s/it]DeepGEMM warmup:  82%|████████▏ | 2939/3584 [00:02<00:00, 2028.91it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:02<00:00, 1750.37it/s]
+[2026-06-08 00:58:33 TP0] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.01, swa token usage: 0.05, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 108.14
+[2026-06-08 00:58:33 TP0] Prefill batch, #new-seq: 3, #new-token: 8448, #cached-token: 0, full token usage: 0.01, swa token usage: 0.05, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 4, cuda graph: False, input throughput (token/s): 87204.45
+[2026-06-08 00:58:36 TP0] Prefill batch, #new-seq: 1, #new-token: 2048, #cached-token: 0, full token usage: 0.00, swa token usage: 0.01, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 730.07
+[2026-06-08 00:59:10 TP0] Entering DeepGEMM JIT Pre-Compile session. It may take a long time (typically 10-20 mins) if you have not run `sglang.compile_deep_gemm`. It is recommended to run `sglang.compile_deep_gemm` with same args as `sglang.launch_server` for pre-compilation to reduce the overhead if you have not run it before. For example: `python3 -m sglang.compile_deep_gemm --model deepseek-ai/DeepSeek-V3 --tp 8 --trust-remote-code`
+[2026-06-08 00:59:10 TP0] Try DeepGEMM JIT Compiling for <TF32_HC_PRENORM_GEMM> N=24, K=28672, num_groups=2 with all Ms. It only takes a little time (typically 1 sec) if you have run `python3 -m sglang.compile_deep_gemm`. 
+[2026-06-08 00:59:10 TP0] Required memory for warmup: 1.7586669921875GB, Available memory: 22.12921142578125GB
+DeepGEMM warmup:   0%|          | 0/3584 [00:00<?, ?it/s]DeepGEMM warmup:   0%|          | 1/3584 [00:01<1:52:13,  1.88s/it]DeepGEMM warmup:  83%|████████▎ | 2981/3584 [00:01<00:00, 2105.61it/s]DeepGEMM warmup: 100%|██████████| 3584/3584 [00:02<00:00, 1791.45it/s]
+[2026-06-08 00:59:18 TP0] Prefill batch, #new-seq: 1, #new-token: 3328, #cached-token: 0, full token usage: 0.00, swa token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 78.96
+[2026-06-08 00:59:55 TP0] Prefill batch, #new-seq: 1, #new-token: 4608, #cached-token: 0, full token usage: 0.00, swa token usage: 0.02, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 123.55
+[2026-06-08 00:59:57 TP0] Prefill batch, #new-seq: 1, #new-token: 5120, #cached-token: 0, full token usage: 0.01, swa token usage: 0.08, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 3102.62
+[2026-06-08 00:59:57 TP0] Prefill batch, #new-seq: 2, #new-token: 10240, #cached-token: 0, full token usage: 0.01, swa token usage: 0.08, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 3, cuda graph: False, input throughput (token/s): 90010.21
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=15682 requires 313644B shared memory (max=232448B), using low-smem fallback kernel.
+[2026-06-08 01:00:01 TP0] Prefill batch, #new-seq: 1, #new-token: 4864, #cached-token: 0, full token usage: 0.01, swa token usage: 0.11, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 1293.86
+[2026-06-08 01:00:01 TP0] Prefill batch, #new-seq: 3, #new-token: 16128, #cached-token: 0, full token usage: 0.01, swa token usage: 0.11, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 4, cuda graph: False, input throughput (token/s): 89993.42
+[2026-06-08 01:00:04 TP0] Prefill batch, #new-seq: 1, #new-token: 5376, #cached-token: 0, full token usage: 0.00, swa token usage: 0.03, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2096.00
+[2026-06-08 01:00:41 TP0] Prefill batch, #new-seq: 1, #new-token: 6656, #cached-token: 0, full token usage: 0.00, swa token usage: 0.03, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 176.91
+[2026-06-08 01:00:49 TP0] Prefill batch, #new-seq: 1, #new-token: 6912, #cached-token: 0, full token usage: 0.00, swa token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 891.99
+[2026-06-08 01:00:53 TP0] Prefill batch, #new-seq: 1, #new-token: 7168, #cached-token: 0, full token usage: 0.00, swa token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 1973.88
+[2026-06-08 01:00:54 TP0] Prefill batch, #new-seq: 1, #new-token: 7424, #cached-token: 0, full token usage: 0.00, swa token usage: 0.04, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 4407.43
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[WARNING] batch_size=14484 requires 289684B shared memory (max=232448B), using low-smem fallback kernel.
+[2026-06-08 01:01:11 TP0] Prefill batch, #new-seq: 1, #new-token: 7424, #cached-token: 0, full token usage: 0.01, swa token usage: 0.11, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 446.67
+[2026-06-08 01:01:11 TP0] Prefill batch, #new-seq: 2, #new-token: 14848, #cached-token: 0, full token usage: 0.01, swa token usage: 0.11, #running-req: 0, #queue-req: 0, #pending-token: 0, #bootstrap-req: 0, #inflight-req: 3, cuda graph: False, input throughput (token/s): 88042.33
+[2026-06-08T01:01:15.316] error: *** STEP 6736.5 ON slurm-gb300-133-189 CANCELLED AT 2026-06-08T01:01:15 DUE to SIGNAL Terminated ***
+[2026-06-08 01:01:15] Received signal 15, starting graceful shutdown
+[2026-06-08 01:01:15] Received shutdown signal; unregistering endpoints from discovery
+[2m2026-06-08T01:01:15.319634Z[0m [32m INFO[0m [2mdynamo_runtime::component::endpoint[0m[2m:[0m Successfully unregistered endpoint instance from discovery - worker removed from routing pool [3minstance_id[0m[2m=[0m7587895377420696586
+[2026-06-08 01:01:15] Grace period 5.00s before stopping endpoints

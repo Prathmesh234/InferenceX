@@ -30,6 +30,7 @@ check_env_vars MODEL TP DATASET RESULT_DIR
 
 CONCURRENCIES="${CONCURRENCIES:-1,2,4,8,16,32,64,128}"
 WARMUP="${WARMUP:-1}"          # 1 = prime prefix cache before each point (default on)
+WARMUP_SESSIONS="${WARMUP_SESSIONS:-0}"   # >0 = warmup only first N sessions (cheap prime)
 MAX_MODEL_LEN="${MAX_MODEL_LEN:-1000000}"
 # max-num-seqs must be >= the largest concurrency we sweep
 if [ -z "${MAX_NUM_SEQS:-}" ]; then
@@ -107,6 +108,8 @@ start_gpu_monitor --output "$RESULT_DIR/gpu_metrics.csv" --interval 1 || true
     --concurrencies "$CONCURRENCIES" \
     --result-dir "$RESULT_DIR" \
     --title "DeepSeek-V4 FP4 vLLM TP$TP — $(basename "$DATASET")" \
+    --warmup-sessions "$WARMUP_SESSIONS" \
+    --prom-url "http://0.0.0.0:$PORT/metrics" \
     "${WARMUP_FLAG[@]}" \
     "${THINK_FLAG[@]}"
 
